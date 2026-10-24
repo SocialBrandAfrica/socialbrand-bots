@@ -47,8 +47,8 @@
 <main id="main">
   <section class="hero hero-bento">
    <div class="bento">
-    <div class="tile t-hero t-mono reveal h2 m-full t-full d-4 d-r2">
-    <div class="eyebrow">Grok Bot templates · by SocialBrand</div>
+    <div class="tile t-hero reveal c-mag h2 m-full t-full d-4 d-r2">
+    <div class="eyebrow pink">Grok Bot templates · by SocialBrand</div>
     <h1>AI TEAMMATES<br><span class="neon">FOR REAL WORK</span></h1>
     <p class="hero-sub">One concrete job each. A clear cadence, a specific output, and your OK before anything goes out.</p>
     <form class="hero-search" id="hero-search-form" role="search">
@@ -70,13 +70,13 @@
     <p class="flow-foot">Nothing to sign up for on this site. You stay in control the whole way.</p>
   </section>
 
-  <section class="section" id="categories">
+  <section class="section" id="bots">
     <div class="eyebrow lime">Catalogue</div>
     <h2 class="section-title">4 bots, full text open</h2>
     <div class="sort-row"><span class="meta">Sort:</span><button type="button" class="chip on" data-sort="new">Newest</button><button type="button" class="chip" data-sort="upvoted">My upvotes first</button></div>
     <div class="grid bento" id="catalogue">
       <article class="card clickable tile lift reveal c-teal h2 m-full d-3" data-slug="token-cop" data-search="token cop dev-agents see every place your ai usage goes. set your own rules. token cop checks them. token-cop-getting-started token-cop-governance token-cop-stocktake token-cop-routing token-cop-prompt-pack token-cop-ledger token-cop-delegation">
-        <div class="card-top"><span class="tag">DEV-AGENTS</span><span class="tag" style="color:var(--lime)">LIVE</span></div>
+        <div class="card-top"><span class="tag cat-dev">DEV-AGENTS</span><span class="tag" style="color:var(--lime)">LIVE</span></div>
         <div class="card-header">
           <img class="avatar-img" src="/assets/img/bots/token-cop/A.jpg" alt="Token Cop avatar" width="48" height="48" loading="lazy">
           <div><h3><a href="/bots/token-cop">Token Cop</a></h3><div class="meta">v0.6 · Updated 24-10-2026</div></div>
@@ -89,7 +89,7 @@
         </div>
       </article>
       <article class="card clickable tile lift reveal c-lime h1 m-full d-3" data-slug="grok-bot-setup-coach" data-search="grok bot setup coach pa-desk new: your bot, actually working, in one sitting. bot email, connectors, a first skill, a first routine, a weekly backup and a shareable my-bot card. setup-coach-getting-started setup-coach-connector-wizard setup-coach-first-routine setup-coach-share-my-bot setup-coach-checkup">
-        <div class="card-top"><span class="tag">PA-DESK</span><span class="tag" style="color:var(--lime)">LIVE</span></div>
+        <div class="card-top"><span class="tag cat-pa">PA-DESK</span><span class="tag" style="color:var(--lime)">LIVE</span></div>
         <div class="card-header">
           <img class="avatar-img" src="/assets/img/bots/grok-bot-setup-coach/A.jpg" alt="Grok Bot Setup Coach avatar" width="48" height="48" loading="lazy">
           <div><h3><a href="/bots/grok-bot-setup-coach">Grok Bot Setup Coach</a></h3><div class="meta">v1.0 · Updated 24-10-2026</div></div>
@@ -102,7 +102,7 @@
         </div>
       </article>
       <article class="card clickable tile lift reveal c-blue h1 m-full d-3" data-slug="gatekeeper" data-search="gatekeeper dev-agents browser-access governance for your bot fleet: which bot may use which signed-in service, logins kept alive, and a weekday-morning check that the rules hold. gatekeeper-getting-started-2 gatekeeper-access-table gatekeeper-health-check gatekeeper-offboarding-drill">
-        <div class="card-top"><span class="tag">DEV-AGENTS</span><span class="tag" style="color:var(--lime)">LIVE</span></div>
+        <div class="card-top"><span class="tag cat-dev">DEV-AGENTS</span><span class="tag" style="color:var(--lime)">LIVE</span></div>
         <div class="card-header">
           <img class="avatar-img" src="/assets/img/bots/gatekeeper/A.jpg" alt="Gatekeeper avatar" width="48" height="48" loading="lazy">
           <div><h3><a href="/bots/gatekeeper">Gatekeeper</a></h3><div class="meta">v1.6 · Updated 24-10-2026</div></div>
@@ -115,7 +115,7 @@
         </div>
       </article>
       <article class="card clickable tile lift reveal c-red h1 m-full d-3 coming-soon" data-slug="supplier-order-checker" data-search="supplier order checker own-ops checks every supplier invoice against your order before you pay it. flags short deliveries, substitutions, price rises and missing credits, and drafts the claim. getting-started invoice-check claim-draft supplier-scorecard">
-        <div class="card-top"><span class="coming-badge">COMING SOON</span><span class="tag">OWN-OPS</span></div>
+        <div class="card-top"><span class="coming-badge">COMING SOON</span><span class="tag cat-own">OWN-OPS</span></div>
         <div class="card-header">
           <img class="avatar-img" src="/assets/img/bots/supplier-order-checker/A.jpg" alt="Supplier Order Checker avatar" width="48" height="48" loading="lazy">
           <div><h3><a href="/bots/supplier-order-checker">Supplier Order Checker</a></h3><div class="meta">v0.3 · In build</div></div>
@@ -129,6 +129,13 @@
       </article>
     </div>
     <p class="empty-note hidden" id="no-results">No bot matches that yet. Try another word, or tell us what you need on X.</p>
+  </section>
+
+  <section class="section" id="categories">
+    <div class="eyebrow pink">Categories</div>
+    <h2 class="section-title">Browse by category</h2>
+    <div class="cats bento"><div class="cat-seg tile reveal c-vio h2 m-full d-3"><div class="tile-label">DEV · Builders</div><div class="cat-list"><span class="cat-chip soon" aria-disabled="true"><span class="cat-id">DEV-TOOLS</span><span class="cat-name">Code and repos</span><span class="cat-n">Soon</span></span><button type="button" class="cat-chip" data-chip="dev-agents"><span class="cat-id">DEV-AGENTS</span><span class="cat-name">Bots and automation</span><span class="cat-n">2 bots</span></button><span class="cat-chip soon" aria-disabled="true"><span class="cat-id">DEV-DATA</span><span class="cat-name">Data and APIs</span><span class="cat-n">Soon</span></span></div></div><div class="cat-seg tile reveal c-teal h2 m-full d-3"><div class="tile-label">PA · Personal assistant</div><div class="cat-list"><button type="button" class="cat-chip" data-chip="pa-desk"><span class="cat-id">PA-DESK</span><span class="cat-name">Desk and setup</span><span class="cat-n">1 bot</span></button><span class="cat-chip soon" aria-disabled="true"><span class="cat-id">PA-COMMS</span><span class="cat-name">Content and comms</span><span class="cat-n">Soon</span></span></div></div><div class="cat-seg tile reveal c-red h2 m-full d-3"><div class="tile-label">OWN · Business owners</div><div class="cat-list"><button type="button" class="cat-chip" data-chip="own-ops"><span class="cat-id">OWN-OPS</span><span class="cat-name">Store and operations</span><span class="cat-n">1 bot</span></button><span class="cat-chip soon" aria-disabled="true"><span class="cat-id">OWN-GROWTH</span><span class="cat-name">Sales and customers</span><span class="cat-n">Soon</span></span></div></div><div class="cat-seg tile reveal c-lime h2 m-full d-3"><div class="tile-label">LIFE · Life admin</div><div class="cat-list"><span class="cat-chip soon" aria-disabled="true"><span class="cat-id">LIFE-MONEY</span><span class="cat-name">Personal money</span><span class="cat-n">Soon</span></span><span class="cat-chip soon" aria-disabled="true"><span class="cat-id">LIFE-HOME</span><span class="cat-name">Home, family, travel</span><span class="cat-n">Soon</span></span><span class="cat-chip soon" aria-disabled="true"><span class="cat-id">LIFE-WELL</span><span class="cat-name">Health, learning, hobbies</span><span class="cat-n">Soon</span></span></div></div></div>
+    <p class="cat-all"><button type="button" class="chip" data-chip="">Show all bots</button></p>
   </section>
 
   <section class="section">
