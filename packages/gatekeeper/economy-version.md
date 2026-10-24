@@ -1,6 +1,6 @@
 # Gatekeeper by SocialBrand — economy text (paste to run)
 By SocialBrand · socialbrand.africa. v1.6. Page: https://bots.socialbrand.africa/bots/gatekeeper
-Written by SocialBrand (socialbrand.africa) on 24-10-2026. Source: the Gatekeeper skills (getting-started-2, access-table, health-check, offboarding-drill). All hard rules from those sources are kept. Owner to OK before posting.
+Written by SocialBrand (socialbrand.africa) on 24-10-2026. Source: the Gatekeeper skills (getting-started-2, access-table, health-check, offboarding-drill). All hard rules from those sources are kept.
 
 ---
 

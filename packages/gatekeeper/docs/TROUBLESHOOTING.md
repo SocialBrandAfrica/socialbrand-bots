@@ -1,7 +1,7 @@
 # Gatekeeper troubleshooting
 Version 1.6. These are the five most likely failures and the fix for each.
 
-## 1. A service shows Sign In every morning
+## 1. A service shows Sign In at the weekday check
 **Cause:** the session keeps dropping. Some sites end sessions often.
 **Fix:**
 - Let the chief bot sign in again when it gets the alert.

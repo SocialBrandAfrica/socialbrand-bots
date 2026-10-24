@@ -7,7 +7,7 @@
 
 - **Avatar rule (SocialBrand):** one high-contrast, distinct central object (a shape or tool unique to this bot): white on a dark background, or dark (navy or black) on a light background. Vary the background and accents per bot so the avatars are easy to tell apart. On a colourful background, use white or dark, whichever contrasts more. The central object is always a bold, simple, logo-style shape with no fine detail.
 
-## Three avatar options (Foundry rule: 3 options per bot)
+## Three avatar options (SocialBrand rule: 3 options per bot)
 1. **Option A (primary, live avatar.png):** navy shield with a white tick on a white background.
 2. **Option B:** white shield with a navy tick on solid navy (#1B2A4E).
 3. **Option C:** navy shield with a white tick on warm amber (#FFB020).
