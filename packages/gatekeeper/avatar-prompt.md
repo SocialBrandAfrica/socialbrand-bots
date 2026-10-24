@@ -1,13 +1,13 @@
 # Avatar prompt
-- Palette: Navy (#1B2A4E) shield, white tick, plain white or very light background. High contrast.
-- Symbol: One bold central object: a shield with a white tick inside. Thick strokes, simple logo-style shape, no fine detail.
-- Mood: Calm, trustworthy, security-first.
-- Background: Solid white or very light grey. Dark (navy) object on light for maximum contrast.
-- Avoid: real people, company logos, padlocks with fine detail, text, gradients that reduce contrast.
+- Approved avatar: avatar.png. The category style-guide sample, approved by SocialBrand on 24-10-2026. It replaces option A.
+- Palette: deep teal background (#025754), white shield, teal keyhole, amber bar. High contrast.
+- Symbol: one bold central object: a white shield with a keyhole and a short amber bar near its base. Thick, simple, logo-style shapes, no fine detail.
+- Mood: calm, trustworthy, security-first.
+- Avoid: real people, company logos, text, fine detail, gradients that reduce contrast.
 
 - **Avatar rule (SocialBrand):** one high-contrast, distinct central object (a shape or tool unique to this bot): white on a dark background, or dark (navy or black) on a light background. Vary the background and accents per bot so the avatars are easy to tell apart. On a colourful background, use white or dark, whichever contrasts more. The central object is always a bold, simple, logo-style shape with no fine detail.
 
 ## Approved avatar
-**Option A (live avatar.png):** navy shield with a white tick on a white background. One bold central object, no text, no people, no logos, no fine detail, square 1024x1024.
+**Style-guide sample (live avatar.png):** white shield with a keyhole and an amber bar, on teal. Square 1024x1024.
 
-Status: option A approved on 24-10-2026.
+Status: style-guide sample approved by SocialBrand on 24-10-2026. Option A (navy shield with a white tick) is superseded.
