@@ -7,6 +7,7 @@ Internal working docs for the bots site and the bot rollout. This folder is not 
 | [pm/status.json](pm/status.json) | Machine-readable workstream status (done, in_progress, blocked, deployed, planned) |
 | [foundry/standard.md](foundry/standard.md) | The bot standard (checks 1-26), copy of the Foundry generator README |
 | [foundry/recipe.md](foundry/recipe.md) | The bot creation recipe, Steps 0-12, run one step at a time |
+| [foundry/avatar-style.md](foundry/avatar-style.md) | Avatar style guide: category symbol families, colours, prompt templates and the public avatar paths |
 | [business-plan/](business-plan/README.md) | Grok PM's business plan v3 lands here |
 
 Rules: PG approves every publish, post, boost, payment and rule change. No bot contacts customers. Dates DD-MM-YYYY, times SAST.
