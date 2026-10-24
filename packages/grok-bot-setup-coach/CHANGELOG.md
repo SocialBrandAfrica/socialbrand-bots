@@ -18,3 +18,4 @@
 ## v0.3 (24-10-2026)
 - First release.
 - Published.
+- Avatar (24-10-2026): the category style-guide avatar (spanner in a speech bubble, navy PA-DESK tile) is approved by SocialBrand and replaces option A and the B/C options. File: avatars/approved.png. Public copy: https://bots.socialbrand.africa/bots/grok-bot-setup-coach/avatar.png.

@@ -19,16 +19,14 @@
     }
   },
   "template_link": "https://x.ai/bot/duonwBK5SXXQTAy6NNg2r",
-  "avatar_approved": {
-    "approved": true,
-    "by": "SocialBrand",
-    "date": "24-10-2026",
-    "note": "Option A only. Options B and C require SocialBrand approval before use."
-  },
+  "avatar_approved": true,
   "changelog": [
     "v0.3: first release, published 24-10-2026",
     "v0.6: avatar is set before the first message, published 24-10-2026",
     "v1.0: Token Cop becomes primary companion (Gatekeeper secondary); three avatar options; Token Cop promo card at end of setup and optionally on monthly checkup; economy-version.md added"
   ],
-  "bot_page": "https://bots.socialbrand.africa/bots/grok-bot-setup-coach"
+  "bot_page": "https://bots.socialbrand.africa/bots/grok-bot-setup-coach",
+  "avatar_approved_date": "24-10-2026",
+  "avatar_approved_option": "style-guide",
+  "avatar": "avatars/approved.png"
 }
