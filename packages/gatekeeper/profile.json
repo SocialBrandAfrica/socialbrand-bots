@@ -1,0 +1,29 @@
+{
+  "name": "Gatekeeper by SocialBrand",
+  "title": "Gatekeeper — Browser-Access Control for Bot Fleets",
+  "description": "By SocialBrand · socialbrand.africa. Security-first access control for bots that share one computer. It decides which bot may use which signed-in service, checks logins each weekday morning, and watches for services that block AI agents.",
+  "category": "Bots and automation",
+  "platform": "Grok Bot",
+  "publisher": "SocialBrand (socialbrand.africa)",
+  "version": "1.6",
+  "template_version": 8,
+  "risk_level": "Low",
+  "category_id": "DEV-AGENTS",
+  "segment": "DEV",
+  "companion": {
+    "name": "Token Cop",
+    "link": "https://bots.socialbrand.africa/bots/token-cop",
+    "reason": "Keeps the same fleet of bots within its AI usage limits, while Gatekeeper controls what each bot may reach."
+  },
+  "companion_main": {
+    "name": "Grok Bot Setup Coach",
+    "link": "https://bots.socialbrand.africa/bots/grok-bot-setup-coach",
+    "reason": "Sets up each new bot in one sitting. Gatekeeper then controls what that bot may reach."
+  },
+  "avatar_approved": true,
+  "avatar_approved_date": "24-10-2026",
+  "avatar_approved_option": "style-guide sample",
+  "avatar_approved_note": "Style-guide sample (white shield with a keyhole and an amber bar, on teal) is the live avatar. Approved on 24-10-2026. It replaces option A.",
+  "page": "https://bots.socialbrand.africa/bots/gatekeeper",
+  "install": "https://x.ai/bot/D03y99U4zXKh0cshnhgah"
+}
