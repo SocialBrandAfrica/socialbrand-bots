@@ -1,0 +1,39 @@
+{
+  "name": "Grok Bot Setup Coach",
+  "title": "Your bot, actually working, in one sitting",
+  "description": "By SocialBrand · socialbrand.africa. Walks a new owner through a working Grok Bot setup in one sitting: bot email, connectors, a first skill, a first routine, a weekly backup, an avatar and a shareable 'my bot' card. Shows every change before making it and never removes what you already have.",
+  "category_id": "PA-DESK",
+  "segment": "PA",
+  "category": "Desk and setup",
+  "platform": "Grok Bot",
+  "publisher": "SocialBrand (socialbrand.africa)",
+  "version": "1.0",
+  "risk_level": "Low (changes only your own bot, with your OK)",
+  "companion": {
+    "name": "Token Cop",
+    "link": "https://bots.socialbrand.africa/bots/token-cop",
+    "reason": "Token Cop tracks your Grok usage so limits don't catch you by surprise. Setup Coach gets each bot working in one sitting with a backup; Token Cop keeps the usage sustainable."
+  },
+  "template_link": "https://x.ai/bot/duonwBK5SXXQTAy6NNg2r",
+  "avatar_approved": {
+    "approved": true,
+    "by": "SocialBrand",
+    "date": "24-10-2026",
+    "note": "Option A only. Options B and C require SocialBrand approval before use."
+  },
+  "status": "v1.0 staged, awaiting SocialBrand publish OK",
+  "changelog": [
+    "v0.3: first release, published 24-10-2026",
+    "v0.6: avatar is set before the first message, published 24-10-2026",
+    "v1.0: Token Cop becomes primary companion (Gatekeeper secondary); three avatar options; Token Cop promo card at end of setup and optionally on monthly checkup; economy-version.md added"
+  ],
+  "install_results": [
+    {
+      "owner": "Spark",
+      "version": "0.6",
+      "setup_minutes": 16,
+      "avatar_set": true,
+      "routines": "both paused by owner choice"
+    }
+  ]
+}
