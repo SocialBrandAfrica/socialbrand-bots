@@ -4,15 +4,15 @@
     {
       "id": "standard",
       "title": "Bot standard checks 1-26 and recipe Steps 0-12",
-      "owner": "Dzi",
+      "owner": "Build lead",
       "blocker": null,
       "next_step": "PG approves any further rule change",
       "due": null
     },
     {
-      "id": "herald",
-      "title": "Herald publisher routine",
-      "owner": "Herald",
+      "id": "publisher",
+      "title": "Publisher routine",
+      "owner": "Publisher",
       "blocker": null,
       "next_step": "Works through publish-log.md 5 times a day",
       "due": null
@@ -20,17 +20,41 @@
     {
       "id": "docs-repo",
       "title": "docs/ in GitHub (PM pack, standard, recipe, status) merged",
-      "owner": "Dzi",
+      "owner": "Build lead",
       "blocker": null,
       "next_step": "Keep docs current on main",
       "due": null
     },
     {
-      "id": "auditor",
-      "title": "Auditor bot created 24-10-2026 as the release gate (checks 1-26, private data, security, versions)",
-      "owner": "Dzi",
+      "id": "release-gate",
+      "title": "Release gate created 24-10-2026 (checks 1-26, private data, security, versions)",
+      "owner": "Build lead",
       "blocker": null,
       "next_step": "Merges a bot's site PR only on a full PASS; template approval cards stay PG's click",
+      "due": null
+    },
+    {
+      "id": "tc-032",
+      "title": "Token Cop v0.3.2 card approved by PG 09:23 SAST 24-10-2026",
+      "owner": "PG",
+      "blocker": null,
+      "next_step": "Site PR #2 merges after the release gate passes it",
+      "due": null
+    },
+    {
+      "id": "sc-v10",
+      "title": "Grok Bot Setup Coach v1.0 card approved by PG 09:23 SAST 24-10-2026",
+      "owner": "PG",
+      "blocker": null,
+      "next_step": "Site PR #2 merges after the release gate passes it",
+      "due": null
+    },
+    {
+      "id": "gk-v16",
+      "title": "Gatekeeper v1.6 card approved by PG 09:23 SAST 24-10-2026",
+      "owner": "PG",
+      "blocker": null,
+      "next_step": "Site PR #2 merges after the release gate passes it",
       "due": null
     }
   ],
@@ -38,7 +62,7 @@
     {
       "id": "site-live",
       "title": "bots.socialbrand.africa live on Vercel",
-      "owner": "Dzi",
+      "owner": "Build lead",
       "blocker": null,
       "next_step": "Keep main green; deploy only via PR",
       "due": null
@@ -54,7 +78,7 @@
     {
       "id": "x-tc-thread",
       "title": "Token Cop X thread live 24-10-2026 (11 posts): https://x.com/Soc_Bran_Africa/status/2113891121336377518",
-      "owner": "Herald",
+      "owner": "Publisher",
       "blocker": null,
       "next_step": "Monitor engagement; boost is PG's action",
       "due": null
@@ -64,23 +88,23 @@
     {
       "id": "tc-live-test",
       "title": "Token Cop live test (2nd reading)",
-      "owner": "Dzi",
-      "blocker": "Partial: claude.ai reading needs box browser sign-in",
+      "owner": "Build lead",
+      "blocker": "Partial: one provider reading still pending",
       "next_step": "Second reading around 14:00 SAST 24-10-2026",
       "due": "24-10-2026"
     },
     {
       "id": "soc-build",
       "title": "Supplier Order Checker v0.3",
-      "owner": "Dzi",
+      "owner": "Build lead",
       "blocker": null,
       "next_step": "Finish build; make 3 avatar options for PG",
       "due": "02-11-2026"
     },
     {
       "id": "batch-ik",
-      "title": "Inbox Keeper v0.3: recipe steps 1-11 done; in Dzi checks and avatar options",
-      "owner": "Dzi",
+      "title": "Inbox Keeper v0.3: recipe steps 1-11 done; in build lead checks and avatar options",
+      "owner": "Build lead",
       "blocker": null,
       "next_step": "Finish checks; PG picks 1 of 3 avatars; live test; then Batch 01 approval pack",
       "due": "02-11-2026"
@@ -88,9 +112,9 @@
     {
       "id": "bp-v3",
       "title": "Business plan v3 (site + rollout)",
-      "owner": "Grok PM",
+      "owner": "PM",
       "blocker": null,
-      "next_step": "PR 'Docs: business plan v3 and status v3' open; Auditor audits and merges",
+      "next_step": "PR 'Docs: business plan v3 and status v3' open; the release gate audits and merges",
       "due": "24-10-2026"
     },
     {
@@ -98,7 +122,7 @@
       "title": "X account is @Soc_Bran_Africa; rename to @SocialBrandSA being looked into",
       "owner": "PG",
       "blocker": "Handle @SocialBrandSA not available yet (held by another account)",
-      "next_step": "PG checks which account holds it; Herald renames only once it is free",
+      "next_step": "PG checks which account holds it; the publisher renames only once it is free",
       "due": null
     }
   ],
@@ -106,33 +130,9 @@
     {
       "id": "site-pages-3",
       "title": "Site pages and docs for Token Cop 0.3.2, Setup Coach v1.0, Gatekeeper v1.6, plus copy refresh (versions, 26 checks on About). PR #2 open",
-      "owner": "Auditor",
-      "blocker": "Waits on tc-032, sc-v10 and gk-v16 card clicks, then a full Auditor PASS",
-      "next_step": "Auditor merges PR #2 on full PASS; refresh build.py versions and About page via PR",
-      "due": "26-10-2026"
-    },
-    {
-      "id": "tc-032",
-      "title": "Token Cop v0.3.2 (house style, writing style, docs)",
-      "owner": "Token Cop",
-      "blocker": "PG card click in Token Cop chat",
-      "next_step": "PG approves the card; Auditor merges site update",
-      "due": "26-10-2026"
-    },
-    {
-      "id": "sc-v10",
-      "title": "Grok Bot Setup Coach v1.0",
-      "owner": "Grok Bot Setup Coach",
-      "blocker": "PG card click in Setup Coach chat",
-      "next_step": "PG approves the card; Auditor merges site update; Herald posts the v1.0 thread; then PG may delete Spark",
-      "due": "26-10-2026"
-    },
-    {
-      "id": "gk-v16",
-      "title": "Gatekeeper v1.6",
-      "owner": "Gatekeeper by SocialBrand",
-      "blocker": "PG card click in Gatekeeper chat",
-      "next_step": "PG approves the card; Auditor merges site update; Herald back-posts the economy text",
+      "owner": "Release gate",
+      "blocker": "Release gate audit of PR #2 (all three cards approved 09:23 SAST 24-10-2026)",
+      "next_step": "Release gate merges PR #2 on a full PASS; then the publisher posts the Setup Coach v1.0 thread and the Gatekeeper back-post",
       "due": "26-10-2026"
     },
     {
@@ -154,7 +154,7 @@
     {
       "id": "x-site-launch",
       "title": "Site launch thread",
-      "owner": "Herald",
+      "owner": "Publisher",
       "blocker": "PG OK",
       "next_step": "PG approves x-posts/01-site-launch.txt",
       "due": null
@@ -162,17 +162,9 @@
     {
       "id": "site-test",
       "title": "Automated site test (build/test.py)",
-      "owner": "Dzi",
-      "blocker": "playwright not installed",
-      "next_step": "Install playwright on the box or drop the test",
-      "due": null
-    },
-    {
-      "id": "claude-signin",
-      "title": "claude.ai sign-in on the box browser",
-      "owner": "Dzi",
-      "blocker": "Google sign-in step on the box browser",
-      "next_step": "Sign in after current Grok task",
+      "owner": "Build lead",
+      "blocker": "Test runner not set up yet",
+      "next_step": "Set up the site test or drop it",
       "due": null
     },
     {
@@ -193,7 +185,7 @@
     },
     {
       "id": "pm-decisions",
-      "title": "PM plan open decisions 1-8",
+      "title": "Business plan v3 open decisions 1-10",
       "owner": "PG",
       "blocker": "PG answers",
       "next_step": "Fold answers into next status update",
@@ -212,7 +204,7 @@
     {
       "id": "site-analytics",
       "title": "Privacy-friendly analytics events",
-      "owner": "Grok PM",
+      "owner": "PM",
       "blocker": "PG decision on tool and budget",
       "next_step": "Propose tool and events",
       "due": "09-11-2026"
@@ -220,7 +212,7 @@
     {
       "id": "site-disclosure",
       "title": "How we make money page and /go/<service> redirects",
-      "owner": "Grok PM",
+      "owner": "PM",
       "blocker": "PG to join referral programmes and approve wording",
       "next_step": "Spec the page and links.json",
       "due": "09-11-2026"
@@ -228,7 +220,7 @@
     {
       "id": "batch-sp",
       "title": "Sales Pipeline v0.3",
-      "owner": "Grok PM",
+      "owner": "PM",
       "blocker": "Inbox Keeper finishing checks",
       "next_step": "Start Step 0 after Inbox Keeper clears",
       "due": "09-11-2026"
@@ -236,7 +228,7 @@
     {
       "id": "batch-fc",
       "title": "Finance Clerk v0.3",
-      "owner": "Grok PM",
+      "owner": "PM",
       "blocker": "Sales Pipeline finishing",
       "next_step": "Start Step 0 after Sales Pipeline",
       "due": "16-11-2026"
@@ -244,18 +236,10 @@
     {
       "id": "batch-approval",
       "title": "Batch 01 single approval message to PG",
-      "owner": "Dzi",
+      "owner": "Build lead",
       "blocker": "All 3 bots ready",
       "next_step": "Send one message: cards, avatars, threads, preview links",
       "due": "02-11-2026"
-    },
-    {
-      "id": "xai-pitch",
-      "title": "Outreach pitch to xAI with PG's idea",
-      "owner": "PG",
-      "blocker": "Idea content UNKNOWN; PG sends it himself",
-      "next_step": "Draft the pitch for PG to review after site stable",
-      "due": "28-10-2026"
     }
   ]
 }

@@ -3,7 +3,7 @@ Internal working docs for the bots site and the bot rollout. This folder is not 
 
 | Path | What it is |
 |---|---|
-| [pm/pm-pack.md](pm/pm-pack.md) | One-file briefing for Grok PM: mission, standard, recipe, site facts, bots, roadmap, monetisation, constraints and status |
+| [pm/pm-pack.md](pm/pm-pack.md) | One-file briefing for PM: mission, standard, recipe, site facts, bots, roadmap, monetisation, constraints and status |
 | [pm/status.json](pm/status.json) | Machine-readable workstream status (done, in_progress, blocked, deployed, planned) |
 | [foundry/standard.md](foundry/standard.md) | The bot standard (checks 1-26), copy of the Foundry generator README |
 | [foundry/recipe.md](foundry/recipe.md) | The bot creation recipe, Steps 0-12, run one step at a time |

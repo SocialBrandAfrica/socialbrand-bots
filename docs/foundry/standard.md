@@ -1,37 +1,37 @@
 # Bot Foundry generator — reusable procedure
-Use this to turn one bot idea into a full Bot Package. Works for Kimi or for Dzi acting as Bot PM. Reference package: packages/supplier-order-checker/.
+Use this to turn one bot idea into a full Bot Package. Works for Kimi or for the build lead acting as Bot PM. Reference package: packages/supplier-order-checker/.
 
 ## Steps (Foundry workflow v2, 24-10-2026: retraced from what stuck on Token Cop, Setup Coach v1.0 and the site)
-Owners: **Grok** (grok.com, Expert) researches, plans and writes packages. **Dzi** writes the briefs, checks every output against this standard and builds the bot. **Herald** posts. **PG** approves avatars, the template card, rule changes and any spend. Grok tasks run one at a time. Each next task launches only after Dzi has checked the last one.
+Owners: **Grok** (grok.com, Expert) researches, plans and writes packages. **The build lead** writes the briefs, checks every output against this standard and builds the bot. **The publisher** posts. **PG** approves avatars, the template card, rule changes and any spend. Grok tasks run one at a time. Each next task launches only after the build lead has checked the last one.
 
-**How it runs:** Grok runs each bot's build from generator/recipe.md, one step per message in one chat per bot, and never as a single prompt. Dzi checks each step before sending the next.
+**How it runs:** Grok runs each bot's build from generator/recipe.md, one step per message in one chat per bot, and never as a single prompt. The build lead checks each step before sending the next.
 
 **Stage A: Need (nothing is built without it)**
-1. **Overlap check.** Compare the idea with existing and planned bots. If 3 or 4 jobs sit in one field, merge them into one specialist (PG rule: specialists, not many small bots). *Stuck before: the roadmap held duplicates of Token Cop and Herald.*
-2. **Viral need and USP research (Grok, live X and web).** Write the brief from research/need-usp/brief.md. Grok must return 3 to 5 real posts with full URLs and dates, the incumbents with prices and the gap they leave, a one-line USP, the "screenshot moment", an X hook, and a verdict of build, reshape or drop with scores. Dzi opens a sample of the URLs. Any quote that doesn't verify is removed, and an unproven need means Park. *Stuck before: demand rested on 2 searches, and Grok's citation tags were placeholders, not URLs.*
+1. **Overlap check.** Compare the idea with existing and planned bots. If 3 or 4 jobs sit in one field, merge them into one specialist (PG rule: specialists, not many small bots). *Stuck before: the roadmap held duplicates of Token Cop and the publisher.*
+2. **Viral need and USP research (Grok, live X and web).** Write the brief from research/need-usp/brief.md. Grok must return 3 to 5 real posts with full URLs and dates, the incumbents with prices and the gap they leave, a one-line USP, the "screenshot moment", an X hook, and a verdict of build, reshape or drop with scores. The build lead opens a sample of the URLs. Any quote that doesn't verify is removed, and an unproven need means Park. *Stuck before: demand rested on 2 searches, and Grok's citation tags were placeholders, not URLs.*
 3. **Qualify (spec.md §0):** 4 gates plus the 100-point score, using the research as proof. Build at 70 or more.
 
 **Stage B: Plan and build**
 4. **The brief fixes the decisions before Grok starts:** the companion bot, the category, the version, the skill slug prefix, routine times and the section counts (stated once, never twice in different ways). Grok fills them in; it doesn't choose them. *Stuck before: Grok chose Gatekeeper over the Setup Coach pairing PG wanted, and a brief said both "six" and "7" sections.*
-5. **Plan (Grok), then Dzi approves it, then Build (Grok)** in the `=== FILE: path ===` format. Dzi splits it into files with the script.
+5. **Plan (Grok), then the build lead approves it, then Build (Grok)** in the `=== FILE: path ===` format. The build lead splits it into files with the script.
 6. **Fixed output rules:**
    - The self-audit goes in self-audit.md and never in economy-version.md.
    - Skills are named `<slug>-<skill>` because the skill library is shared.
    - Routines are at least 30 minutes apart, so ±15-minute flexible windows can't overlap.
    - All sources are full URLs, with no citation placeholders.
    *Stuck before: Grok put the audit in the economy version twice, the 06:45 and 07:00 routines clashed, and generic skill names were used.*
-7. **Avatars come during the build, not at the end.** Dzi generates the 3 options from avatar-prompt.md and sends them to PG in one message. If PG says "pick and decide", Dzi picks, records who chose and when in profile.json, and moves on. *Stuck before: publishing waited on avatars that hadn't been made yet.*
+7. **Avatars come during the build, not at the end.** The build lead generates the 3 options from avatar-prompt.md and sends them to PG in one message. If PG says "pick and decide", the build lead picks, records who chose and when in profile.json, and moves on. *Stuck before: publishing waited on avatars that hadn't been made yet.*
 8. **Strip private data and run the self-audit:** the checklist and the grep below.
 
 **Stage C: Prove it works**
-9. **Dzi creates the bot**, which sets itself up from the package: profile, skills, paused routines and avatar. Grok Bot has no instructions field on a profile, so the instructions travel as memories in the template plus a pointer to instructions.md.
+9. **The build lead creates the bot**, which sets itself up from the package: profile, skills, paused routines and avatar. Grok Bot has no instructions field on a profile, so the instructions travel as memories in the template plus a pointer to instructions.md.
 10. **Desk test,** then a **live test** for any flagship or boosted bot: run it read-only on PG's real accounts. Record the results in live-test-01.md and bump to vX.X.1 for any fix. *Stuck before: Token Cop passed a test with a pretend owner only.*
 
 **Stage D: Publish and post**
-11. **Publish log row complete before publishing:** template link, economy text file, approved avatar path and X thread file, plus the site page. Herald skips incomplete rows. *Stuck before: Gatekeeper had no economy text or avatar path.*
+11. **Publish log row complete before publishing:** template link, economy text file, approved avatar path and X thread file, plus the site page. The publisher skips incomplete rows. *Stuck before: Gatekeeper had no economy text or avatar path.*
 12. **Stable companion links:** companions point to `https://bots.socialbrand.africa/bots/<slug>`, which never changes, not to x.ai links. So no bot waits for another bot's share link. Publish the companion pair together. *Stuck before: Setup Coach v1.0 waited on Token Cop's link.*
-13. **One PG approval moment:** Dzi stages the template, then messages PG with the bot's chat link (to approve the template card), the avatar choice, the X thread and any boost post, all together. *Stuck before: the template card needed PG in another bot's chat, which surfaced late.*
-14. **Herald posts** the published row on X, records the URL, and the site page goes live. PG does any paid boost himself.
+13. **One PG approval moment:** the build lead stages the template, then messages PG with the bot's chat link (to approve the template card), the avatar choice, the X thread and any boost post, all together. *Stuck before: the template card needed PG in another bot's chat, which surfaced late.*
+14. **The publisher posts** the published row on X, records the URL, and the site page goes live. PG does any paid boost himself.
 15. **Claims check on all public copy.** No claim we can't prove: "enterprise-grade" becomes "security-first", and the disclosure line is the honest one. Every number is real or labelled.
 
 ## Audit checklist (reject if any fail)
