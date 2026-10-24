@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gatekeeper v1.6 · SocialBrand Bots</title>
 <meta name="description" content="Browser-access governance for your bot fleet: which bot may use which signed-in service, logins kept alive, and a weekday-morning check that the rules hold. Free, full open text. By SocialBrand.">
@@ -30,6 +31,8 @@
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav">
   <a href="/" class="logo">SocialBrand Bots<span class="dot">.</span></a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu"><span class="bars" aria-hidden="true"></span></button>
+  <div class="nav-menu" id="nav-menu">
   <div class="nav-links">
     <a href="/#catalogue">Bots</a>
     <a href="/#categories">Categories</a>
@@ -39,19 +42,27 @@
   </div>
   <button class="search-pill" type="button" onclick="var i=document.getElementById('hero-search'); if(i){i.focus();}else{location.href='/#catalogue';}">Search… <kbd>Ctrl K</kbd></button>
   <a href="https://x.com/Soc_Bran_Africa" target="_blank" rel="noopener" class="x-link">X</a>
+  </div>
 </nav>
 <div class="banner shared-banner" id="shared-banner"><div class="inner" id="shared-banner-text"></div></div>
 
 <main id="main">
-  <section class="hero" style="padding-bottom:1rem;">
+  <section class="hero bot-hero">
     <div class="eyebrow cyan">DEV-AGENTS · Grok Bot · v1.6</div>
     <h1>GATEKEEPER<br><span class="neon">WHO GETS IN</span></h1>
-    <p class="lead">Browser-access governance for your bot fleet: which bot may use which signed-in service, logins kept alive, and a weekday-morning check that the rules hold.</p>
-    <div class="trust-badges"><span class="badge strong">v1.6</span><span class="badge">Last updated 24-10-2026</span><span class="badge strong">Full open text</span><span class="badge strong">Routines ship paused</span><span class="badge">By SocialBrand · socialbrand.africa</span></div>
-    <div style="margin-top:1rem; display:flex; gap:0.5rem; flex-wrap:wrap;">
-      <button class="upvote" type="button" data-upvote="gatekeeper" aria-pressed="false">▲ Upvote</button>
-      <button class="btn-primary" type="button" data-share="gatekeeper" data-name="Gatekeeper" data-version="v1.6" data-pitch="Browser-access governance for your bot fleet: which bot may use which signed-in service, logins kept alive, and a weekday-morning check that the rules hold." data-avatar="/assets/img/bots/gatekeeper/A.jpg">Share</button>
-      <a class="btn-secondary" href="/#catalogue">← Catalogue</a>
+    <div class="bento summary">
+      <div class="tile reveal c-teal h2 m-full t-full d-3 sum-what"><div class="tile-label">What it does</div><p class="lead">Browser-access governance for your bot fleet: which bot may use which signed-in service, logins kept alive, and a weekday-morning check that the rules hold.</p></div>
+      <div class="tile lift reveal hot c-lime m-full d-1 sum-ver"><div class="tile-label">Version</div><div class="big">v1.6</div><div class="tile-sub">Last updated 24-10-2026</div></div>
+      <a class="tile lift reveal c-amb h2 d-1 sum-num" href="#routines"><div class="tile-label">Routines</div><div class="big">2</div><div class="tile-sub">Routines ship paused</div></a>
+      <a class="tile lift reveal c-vio h2 d-1 sum-num" href="#skills"><div class="tile-label">Skills</div><div class="big">4</div><div class="tile-sub">Full open text</div></a>
+      <div class="tile reveal c-mag h2 m-full d-2 sum-install"><div class="tile-label">Install</div><p class="small">Main route: copy the economy text or the full text and paste it into a new Grok Bot. One-click is secondary.</p><div class="install-box" data-install="gatekeeper"><a class="btn-secondary" href="https://x.ai/bot/D03y99U4zXKh0cshnhgah" target="_blank" rel="noopener">One-click install (secondary)</a></div></div>
+      <div class="tile reveal c-blue h1 m-full t-full d-4 sum-act"><div class="trust-badges"><span class="badge strong">v1.6</span><span class="badge">Last updated 24-10-2026</span><span class="badge strong">Full open text</span><span class="badge strong">Routines ship paused</span><span class="badge">By SocialBrand · socialbrand.africa</span></div>
+        <div class="hero-actions">
+          <button class="upvote" type="button" data-upvote="gatekeeper" aria-pressed="false">▲ Upvote</button>
+          <button class="btn-primary" type="button" data-share="gatekeeper" data-name="Gatekeeper" data-version="v1.6" data-pitch="Browser-access governance for your bot fleet: which bot may use which signed-in service, logins kept alive, and a weekday-morning check that the rules hold." data-avatar="/assets/img/bots/gatekeeper/A.jpg">Share</button>
+          <a class="btn-secondary" href="/#catalogue">← Catalogue</a>
+        </div></div>
+      
     </div>
     <nav class="toc" aria-label="On this page"><a href="#economy">Economy text</a><a href="#profile">Profile</a><a href="#instructions">Instructions</a><a href="#skills">Skills</a><a href="#routines">Routines</a><a href="#avatar">Avatar</a><a href="#selling">Selling points</a><a href="#docs">Docs</a><a href="#companion">Companion</a></nav>
     <section class="flow-compact" aria-label="How it works">
@@ -62,9 +73,9 @@
   </section>
   <div class="bot-layout">
     <div class="main">
-      <section class="section-block economy" id="economy">
+      <section class="section-block economy tile reveal c-lime h2" id="economy">
         <div class="header-row"><h2 class="neon-header lime">Economy text · paste to run</h2><button class="copy-btn" type="button" data-copy="economy-text">Copy</button></div>
-        <pre class="block-text truncated" id="economy-text"># Gatekeeper by SocialBrand — economy text (paste to run)
+        <details class="fold" data-fold-mobile open><summary class="fold-sum"><span class="when-closed">Show all</span><span class="when-open">Show less</span></summary><div class="fold-body"><pre class="block-text truncated" id="economy-text"># Gatekeeper by SocialBrand — economy text (paste to run)
 By SocialBrand · socialbrand.africa. v1.6. Page: https://bots.socialbrand.africa/bots/gatekeeper
 Written by SocialBrand (socialbrand.africa) on 24-10-2026. Source: the Gatekeeper skills (getting-started-2, access-table, health-check, offboarding-drill). All hard rules from those sources are kept.
 
@@ -117,23 +128,23 @@ Companions (recommend only, never install):
 One-click install (optional): https://x.ai/bot/D03y99U4zXKh0cshnhgah
 Info page (full text, docs and updates): https://bots.socialbrand.africa/bots/gatekeeper
 Or paste this text into a new Grok Bot.
-</pre><button class="show-all" type="button" data-toggle="economy-text">Show all</button>
+</pre><button class="show-all" type="button" data-toggle="economy-text">Show all</button></div></details>
         <p class="econ-note">The short version that works on its own and keeps every safety and hard rule. This is the text we post on X. The full text is below.</p>
       </section>
-      <section class="section-block" id="profile">
+      <section class="section-block tile reveal c-mag h1" id="profile">
         <div class="header-row"><h2 class="neon-header pink">Profile</h2><div><button class="copy-btn" type="button" data-copy="profile-text">Copy</button></div></div>
-<pre class="block-text" id="profile-text">Gatekeeper by SocialBrand: browser-access governance for your bot fleet
+<details class="fold" data-fold-mobile open><summary class="fold-sum"><span class="when-closed">Show all</span><span class="when-open">Show less</span></summary><div class="fold-body"><pre class="block-text" id="profile-text">Gatekeeper by SocialBrand: browser-access governance for your bot fleet
 By SocialBrand · socialbrand.africa. Security-first access control for bots that share one computer. It decides which bot may use which signed-in service, checks logins each weekday morning, and watches for services that block AI agents.
 Category: DEV-AGENTS · Bots and automation
 Version: 1.6 · Risk: Low
 Platform: Grok Bot
 Publisher: SocialBrand (socialbrand.africa)
 Written by SocialBrand (socialbrand.africa)
-Companion: Grok Bot Setup Coach (https://bots.socialbrand.africa/bots/grok-bot-setup-coach); also Token Cop (https://bots.socialbrand.africa/bots/token-cop)</pre>
+Companion: Grok Bot Setup Coach (https://bots.socialbrand.africa/bots/grok-bot-setup-coach); also Token Cop (https://bots.socialbrand.africa/bots/token-cop)</pre></div></details>
       </section>
-      <section class="section-block" id="instructions">
+      <section class="section-block tile reveal c-lime h1" id="instructions">
         <div class="header-row"><h2 class="neon-header lime">Instructions</h2><div><button class="copy-btn" type="button" data-copy="instr-text">Copy</button></div></div>
-<pre class="block-text truncated" id="instr-text"># Gatekeeper by SocialBrand — instructions
+<details class="fold" data-fold-mobile open><summary class="fold-sum"><span class="when-closed">Show all</span><span class="when-open">Show less</span></summary><div class="fold-body"><pre class="block-text truncated" id="instr-text"># Gatekeeper by SocialBrand — instructions
 v1.6. By SocialBrand · socialbrand.africa. Page: https://bots.socialbrand.africa/bots/gatekeeper
 
 ## Role
@@ -202,9 +213,9 @@ See routines.md.
 Recommend only. Never install it for the owner. Show the companion card once, as the last message of gatekeeper-getting-started-2.
 - Companion: Token Cop (https://bots.socialbrand.africa/bots/token-cop). Recommend it when the owner runs several bots: it keeps the fleet within its AI usage limits.
 - Main recommendation on the card: Grok Bot Setup Coach (https://bots.socialbrand.africa/bots/grok-bot-setup-coach). It sets up each new bot. Gatekeeper then controls what that bot may reach.
-</pre><button class="show-all" type="button" data-toggle="instr-text">Show all</button>
+</pre><button class="show-all" type="button" data-toggle="instr-text">Show all</button></div></details>
       </section>
-      <section class="section-block" id="skills">
+      <section class="section-block tile reveal c-teal h1" id="skills">
         <div class="header-row"><h2 class="neon-header cyan">Skills · 4</h2><div><button class="copy-btn" type="button" data-copy="skills-all">Copy</button></div></div>
         <div class="skill-full">
           <div class="skill-head"><div><span class="skill-name">gatekeeper-getting-started-2</span><div class="skill-desc">Use as the first conversation with a new owner of the Gatekeeper browser-access template, to set up logins and per-bot access in one sitting. Run it on the very first turn, before asking about routines.</div></div><button class="copy-btn" type="button" data-copy="skill-1">Copy</button></div>
@@ -368,9 +379,9 @@ description: Use when a client, bot or person leaves, to revoke all of their acc
 5. Update the access table. Brief the affected bots. Confirm what&#x27;s done and what&#x27;s still with the owner.
 </textarea>
       </section>
-      <section class="section-block" id="routines">
+      <section class="section-block tile reveal c-mag h1" id="routines">
         <div class="header-row"><h2 class="neon-header pink">Routines</h2><div><button class="copy-btn" type="button" data-copy="routines-text">Copy</button></div></div>
-<div class="table-wrap"><table><thead><tr><th>Name</th><th>Cron</th><th>Timing</th><th>Prompt</th><th>Output</th></tr></thead><tbody><tr><td>Login health check (login-health-check)</td><td>0 7 * * 1-5</td><td>Weekdays 07:00</td><td>Run @gatekeeper-health-check. It is read-only: check which services in the access table show Sign In, skipping human-only services. Change nothing. Copy no cookies. For each dropped service, send the chief bot one short line naming the service and asking it to sign in again. Update &#x27;last checked&#x27;. If everything is signed in, send nothing.</td><td>Alert only on failure: one line per dropped service to the chief bot</td></tr><tr><td>Agent-risk watch (agent-risk-watch)</td><td>0 9 * * 1</td><td>Mondays 09:00</td><td>Scan X and the web for news from the past week. Look for services in the access table, or common ones like email, WhatsApp, social and AI tools, that started blocking or restricting AI agents or automated browser use. Compare with earlier reports. If something relevant changed, send the owner a short note here. Name the service, the change and the source link. Offer: A move it to human only (recommended); B keep as is. If nothing changed, send nothing.</td><td>Short note to the owner only if something changed</td></tr></tbody></table></div><div class="paused-note">Both routines ship paused. Timezone: Africa/Johannesburg. Gatekeeper asks before turning either on.</div><textarea class="hidden" id="routines-text" aria-hidden="true" tabindex="-1"># Routines (timezone: Africa/Johannesburg)
+<div class="table-wrap"><table><thead><tr><th>Name</th><th>Cron</th><th>Timing</th><th>Prompt</th><th>Output</th></tr></thead><tbody><tr><td data-label="Name">Login health check (login-health-check)</td><td data-label="Cron">0 7 * * 1-5</td><td data-label="Timing">Weekdays 07:00</td><td data-label="Prompt">Run @gatekeeper-health-check. It is read-only: check which services in the access table show Sign In, skipping human-only services. Change nothing. Copy no cookies. For each dropped service, send the chief bot one short line naming the service and asking it to sign in again. Update &#x27;last checked&#x27;. If everything is signed in, send nothing.</td><td data-label="Output">Alert only on failure: one line per dropped service to the chief bot</td></tr><tr><td data-label="Name">Agent-risk watch (agent-risk-watch)</td><td data-label="Cron">0 9 * * 1</td><td data-label="Timing">Mondays 09:00</td><td data-label="Prompt">Scan X and the web for news from the past week. Look for services in the access table, or common ones like email, WhatsApp, social and AI tools, that started blocking or restricting AI agents or automated browser use. Compare with earlier reports. If something relevant changed, send the owner a short note here. Name the service, the change and the source link. Offer: A move it to human only (recommended); B keep as is. If nothing changed, send nothing.</td><td data-label="Output">Short note to the owner only if something changed</td></tr></tbody></table></div><div class="paused-note">Both routines ship paused. Timezone: Africa/Johannesburg. Gatekeeper asks before turning either on.</div><textarea class="hidden" id="routines-text" aria-hidden="true" tabindex="-1"># Routines (timezone: Africa/Johannesburg)
 | Name | Cron | Timing | Prompt | Output |
 |---|---|---|---|---|
 | Login health check (login-health-check) | 0 7 * * 1-5 | Weekdays 07:00 | Run @gatekeeper-health-check. It is read-only: check which services in the access table show Sign In, skipping human-only services. Change nothing. Copy no cookies. For each dropped service, send the chief bot one short line naming the service and asking it to sign in again. Update &#x27;last checked&#x27;. If everything is signed in, send nothing. | Alert only on failure: one line per dropped service to the chief bot |
@@ -381,12 +392,12 @@ On Mondays the two routines run two hours apart (07:00 and 09:00), so their ±15
 To pause a routine, ask Gatekeeper in chat, for example: &quot;Pause the login health check.&quot;
 </textarea>
       </section>
-      <section class="section-block" id="avatar">
+      <section class="section-block tile reveal c-lime h1" id="avatar">
         <div class="header-row"><h2 class="neon-header lime">Avatar</h2><div><button class="copy-btn" type="button" data-copy="avatar-prompt">Copy prompt</button></div></div>
-<p style="font-size:0.85rem; color:var(--secondary); margin-bottom:0.5rem;">The approved avatar. Installed bots download it from https://bots.socialbrand.africa/bots/gatekeeper/avatar.png.</p><div class="avatar-options"><figure class="avatar-opt"><img src="/assets/img/bots/gatekeeper/A.jpg" alt="Gatekeeper avatar · White shield with a keyhole on teal (approved 24-10-2026)" width="140" height="140" loading="lazy"><figcaption class="avatar-label">White shield with a keyhole on teal (approved 24-10-2026)</figcaption></figure></div><pre class="block-text truncated" id="avatar-prompt">One bold central object: a white shield with a keyhole and a short amber bar near its base, on deep teal. No text, no people, no logos, no fine detail. Square 1024x1024.
+<p class="avatar-note">The approved avatar. Installed bots download it from https://bots.socialbrand.africa/bots/gatekeeper/avatar.png.</p><div class="avatar-options"><figure class="avatar-opt"><img src="/assets/img/bots/gatekeeper/A.jpg" alt="Gatekeeper avatar · White shield with a keyhole on teal (approved 24-10-2026)" width="140" height="140" loading="lazy"><figcaption class="avatar-label">White shield with a keyhole on teal (approved 24-10-2026)</figcaption></figure></div><pre class="block-text truncated" id="avatar-prompt">One bold central object: a white shield with a keyhole and a short amber bar near its base, on deep teal. No text, no people, no logos, no fine detail. Square 1024x1024.
 </pre><button class="show-all" type="button" data-toggle="avatar-prompt">Show all</button>
       </section>
-      <section class="section-block" id="selling">
+      <section class="section-block tile reveal c-teal h1" id="selling">
         <div class="header-row"><h2 class="neon-header cyan">Selling points</h2><div><button class="copy-btn" type="button" data-copy="selling-text">Copy</button></div></div>
 <pre class="block-text" id="selling-text">- Sign your bots up to new tools with a bot email, so your own inbox stays clean.
 - Keep each client&#x27;s dashboards and WhatsApp limited to that client&#x27;s bot.
@@ -397,11 +408,11 @@ Risk level: Low. Read-only checks; changes only after your OK.
 Companion: Grok Bot Setup Coach, which sets up each new bot in one sitting.
 </pre>
       </section>
-      <section class="section-block" id="docs">
+      <section class="section-block tile reveal c-mag h1" id="docs">
         <div class="header-row"><h2 class="neon-header pink">Docs</h2></div>
         <ul><li><a href="https://github.com/SocialBrandAfrica/socialbrand-bots/blob/main/packages/gatekeeper/docs/README.md" target="_blank" rel="noopener" style="color:var(--cyan);">README.md</a> · What it does, routines, skills, hard rules</li><li><a href="https://github.com/SocialBrandAfrica/socialbrand-bots/blob/main/packages/gatekeeper/docs/SETUP.md" target="_blank" rel="noopener" style="color:var(--cyan);">SETUP.md</a> · Step-by-step first run and a short test</li><li><a href="https://github.com/SocialBrandAfrica/socialbrand-bots/blob/main/packages/gatekeeper/docs/FAQ.md" target="_blank" rel="noopener" style="color:var(--cyan);">FAQ.md</a> · Common questions, limits and costs</li><li><a href="https://github.com/SocialBrandAfrica/socialbrand-bots/blob/main/packages/gatekeeper/docs/TROUBLESHOOTING.md" target="_blank" rel="noopener" style="color:var(--cyan);">TROUBLESHOOTING.md</a> · The most likely failures and the fix for each</li></ul>
       </section>
-      <section class="companion-promo teal" id="companion">
+      <section class="companion-promo reveal teal" id="companion">
         <div class="avatar-lg"><img src="/assets/img/bots/grok-bot-setup-coach/A.jpg" alt="Grok Bot Setup Coach avatar" width="140" height="140" loading="lazy"></div>
         <div>
           <div class="eyebrow">Companion bot · Grok Bot Setup Coach</div>
@@ -414,7 +425,7 @@ Companion: Grok Bot Setup Coach, which sets up each new bot in one sitting.
         </div>
       </section>
     </div>
-    <aside class="side-panel">
+    <aside class="side-panel tile reveal c-teal h1">
       <h4>Can access</h4><ul><li>The access table on your shared computer (no passwords)</li><li>Connector status checks</li><li>Opening service pages read-only to see if they show Sign In</li><li>Messages to your chief bot and other bots (their access briefs)</li></ul>
       <h4>Cannot access</h4><ul><li>Customer or supplier contact</li><li>Payments, banking, brokers (human only)</li><li>Passwords in chat; logins live in the vault only</li><li>Copying or importing cookies</li><li>Signing in itself unless it is the chief bot</li><li>Rule changes without the owner</li></ul>
       <h4>Hard rules</h4><ul><li>No customer or supplier contact.</li><li>Owner alone approves rule changes.</li><li>Least privilege and client separation by default.</li><li>Routines ship paused.</li><li>Blocks are rules, not locks; says so plainly.</li></ul>
@@ -432,7 +443,7 @@ Companion: Grok Bot Setup Coach, which sets up each new bot in one sitting.
       <strong id="share-title">Share</strong>
       <button class="close-x" type="button" data-close-share aria-label="Close">×</button>
     </div>
-    <p style="font-size:0.85rem; color:var(--secondary); margin:0.75rem 0;">Make your own version. It looks exactly like ours but carries your name and handle, so the find is yours. The SocialBrand line and site link stay. No points, no leaderboard.</p>
+    <p class="modal-note">Make your own version. It looks exactly like ours but carries your name and handle, so the find is yours. The SocialBrand line and site link stay. No points, no leaderboard.</p>
     <label for="share-name">Your name (optional)</label>
     <input id="share-name" type="text" maxlength="40" placeholder="Your name" autocomplete="name">
     <label for="share-handle">Your handle</label>
@@ -443,7 +454,7 @@ Companion: Grok Bot Setup Coach, which sets up each new bot in one sitting.
         <img id="share-avatar" class="avatar-img" src="/apple-touch-icon.png" alt="">
         <div><strong id="share-bot-name"></strong><div class="meta" id="share-bot-meta"></div></div>
       </div>
-      <p style="font-size:0.85rem; color:var(--secondary);" id="share-bot-pitch"></p>
+      <p class="modal-note" id="share-bot-pitch"></p>
       <div class="meta" style="margin-top:0.5rem;" id="share-url">bots.socialbrand.africa</div>
     </div>
     <div class="row">

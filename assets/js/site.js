@@ -93,7 +93,7 @@
       if (link) {
         var a = document.createElement("a");
         a.href = link; a.target = "_blank"; a.rel = "noopener";
-        a.className = "btn-secondary"; a.style.cssText = "display:inline-block;font-size:0.8rem;padding:0.4rem 0.8rem;";
+        a.className = "btn-secondary";
         a.textContent = "One-click install (secondary)";
         var p = document.createElement("div");
         p.className = "meta mt-1"; p.textContent = "Plain link: " + link;
@@ -262,6 +262,61 @@
     if (e.key === "Escape") closeShare();
   });
 
-  function init() { renderVotes(); renderInstall(); wireShare(); sharedBanner(); wireCatalogue(); }
+
+  /* ---- Bento v1: compact nav, scroll reveal, mobile folds ---- */
+  var REDUCED = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function wireNav() {
+    var nav = document.querySelector(".nav"), btn = nav && nav.querySelector(".nav-toggle");
+    if (!btn) return;
+    function set(open) { nav.classList.toggle("open", open); btn.setAttribute("aria-expanded", open ? "true" : "false"); }
+    btn.addEventListener("click", function (e) { e.stopPropagation(); set(!nav.classList.contains("open")); });
+    $$(".nav-menu a").forEach(function (a) { a.addEventListener("click", function () { set(false); }); });
+    document.addEventListener("click", function (e) { if (nav.classList.contains("open") && !nav.contains(e.target)) set(false); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && nav.classList.contains("open")) { set(false); btn.focus(); } });
+  }
+  function wireReveal() {
+    var els = $$(".reveal");
+    if (!els.length) return;
+    if (REDUCED || !("IntersectionObserver" in window)) { els.forEach(function (el) { el.classList.add("in"); }); return; }
+    var queue = [], timer = null;
+    function flush() {
+      var el = queue.shift();
+      if (el) el.classList.add("in");
+      timer = queue.length ? setTimeout(flush, 60) : null;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        io.unobserve(en.target); queue.push(en.target);
+        if (!timer) timer = setTimeout(flush, 0);
+      });
+    }, { rootMargin: "0px 0px -6% 0px", threshold: 0.08 });
+    els.forEach(function (el) { io.observe(el); });
+  }
+  function animateDetails(d) {
+    var sum = d.querySelector("summary"), body = d.querySelector(".fold-body");
+    if (!sum || !body || !body.animate) return;
+    sum.addEventListener("click", function (e) {
+      if (REDUCED) return;
+      e.preventDefault();
+      if (d.open) {
+        var h = body.offsetHeight;
+        var an = body.animate([{ height: h + "px", opacity: 1 }, { height: "0px", opacity: 0 }], { duration: 280, easing: "ease-out" });
+        an.onfinish = function () { d.open = false; };
+      } else {
+        d.open = true;
+        var h2 = body.offsetHeight;
+        body.animate([{ height: "0px", opacity: 0 }, { height: h2 + "px", opacity: 1 }], { duration: 320, easing: "ease-out" });
+      }
+    });
+  }
+  function wireFolds() {
+    var mobile = window.matchMedia && window.matchMedia("(max-width: 639px)").matches;
+    $$("details[data-fold-mobile]").forEach(function (d) {
+      if (mobile && !(location.hash && d.querySelector(location.hash.replace(/[^\w#-]/g, "")))) d.open = false;
+      animateDetails(d);
+    });
+  }
+  function init() { renderVotes(); renderInstall(); wireShare(); sharedBanner(); wireCatalogue(); wireNav(); wireFolds(); wireReveal(); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
 })();
