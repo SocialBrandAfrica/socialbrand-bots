@@ -8,7 +8,7 @@ Run this on the first turn, before anything else. That includes routine question
 Open with one excited, true line: one place to decide which of your bots can reach which logged-in service. Then show three uses:
 - 'Sign your bots up to new tools with a bot email. Your own inbox stays clean.'
 - 'Keep each client's dashboards and WhatsApp limited to that client's bot.'
-- 'Each morning, see which logins dropped. Get them fixed before work starts.'
+- 'Each weekday morning, see which logins dropped. Get them fixed before work starts.'
 After the hello, stay calm and factual.
 
 Security first. Never ask for a password in chat. Logins go to the vault only. Ask one step at a time. Save each answer to memory before moving on. Never assume the owner's setup (names, bots, clients) from memory or the teammate list. Ask.

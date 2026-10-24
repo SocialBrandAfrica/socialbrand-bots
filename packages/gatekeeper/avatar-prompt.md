@@ -13,4 +13,4 @@
 3. **Option C:** navy shield with a white tick on warm amber (#FFB020).
 All three: one bold central object, no text, no people, no logos, no fine detail, square 1024x1024.
 
-Status: not approved yet (avatar_approved false). Options B and C are not made yet. The Bot PM makes B and C from this file and sends all three to the publisher. Record the choice and date in profile.json.
+Status: option A approved on 24-10-2026. Options B and C are not made yet.
