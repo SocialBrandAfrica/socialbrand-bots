@@ -25,7 +25,7 @@ Flagship: Token Cop. Supporting: Gatekeeper by SocialBrand, Grok Bot Setup Coach
 Only disclosed referral/affiliate links. No other monetisation.
 
 Confirmed programmes (checked 24-10-2026 against the official pages; rates can change, re-check terms before joining):
-- ElevenLabs: 22% for 12 months on Starter to Scale plans, 11% on the Business plan, no enterprise. Source: https://elevenlabs.io/affiliates
+- ElevenLabs: 22% for 12 months on Starter to Scale plans, 11% on the Business plan, no enterprise. Sources: https://elevenlabs.io/affiliates and https://elevenlabs.io/affiliates-terms
 - n8n: 30% for 12 months on n8n Cloud referrals. Source: https://n8n.io/affiliates/
 - Make: 35% of subscription payments for 12 months. Source: https://www.make.com/en/affiliate
 - Vercel: possible (terms exist, rate unverified).

@@ -1,4 +1,6 @@
 # SocialBrand Bots: PM pack for PM
+> Superseded by docs/pm/status-v3.json and docs/business-plan/README.md (24-10-2026). Kept as history.
+
 Updated 24-10-2026, 09:30 SAST (UTC+2). Compiled by the build lead from the Foundry files in `bot-foundry/`. Only facts from those files are used. Anything not found there is marked UNKNOWN.
 
 **Your job (PM):** update the business plan to v3 for the whole bots site and the bot rollout. Use this pack as the single source of facts. Return a structured plan with every workstream marked done, in progress, blocked, deployed or planned, each with an owner and a next action. The plan lands in GitHub at `docs/business-plan/` in https://github.com/SocialBrandAfrica/socialbrand-bots. The machine-readable status lives in `docs/pm/status.json`.
@@ -71,10 +73,10 @@ Source: `generator/recipe.md` (full copy in `docs/foundry/recipe.md`). One Grok 
 
 ## 4. Site facts
 - **URL:** https://bots.socialbrand.africa (live 24-10-2026, Valid Configuration on Vercel).
-- **Vercel project:** socialbrand-bots (team socialbrandafricas-projects). Auto-deploys `main`. Each PR gets a preview link.
+- **Vercel project:** socialbrand-bots. Auto-deploys `main`. Each PR gets a preview link.
 - **GitHub repo:** https://github.com/SocialBrandAfrica/socialbrand-bots (public).
 - **Stack:** static HTML, CSS and JS. No backend, no cookies, no tracking. Upvotes in the visitor's browser only (localStorage).
-- **Rebuild:** `python3 site/build/build.py` regenerates `site/live` (index, about, bots/*, sitemap.xml, robots.txt, vercel.json). Then commit and push in `site/live`. Push to main deploys. `site/build/test.py` needs playwright, which is not installed.
+- **Rebuild:** `python3 site/build/build.py` regenerates `site/live` (index, about, bots/*, sitemap.xml, robots.txt, vercel.json). Then commit and push in `site/live`. Push to main deploys.
 - **Install links:** one place only, `assets/js/config.js` (`installLinks`). Empty string shows "Install link coming soon".
 - **Pages that exist:** `/`, `/about`, and bot pages:
 
@@ -140,14 +142,13 @@ The build lead's check notes on the PM plan: the plan still says "16 checks" (no
 ## 7. Monetisation and referral research
 Sources: `research/monetisation/brief.md`, `research/monetisation/referral-research-grok.md`. PG's decision: the only monetisation is disclosed referral/affiliate links.
 
-- **Real cash, confirmed:** ElevenLabs 22% for 12 months (PartnerStack), n8n 30% for 12 months on Cloud (PartnerStack, min ~EUR 100), Make 35% for 12 months (Wise, min $100 and 3 paying users).
+- **Real cash, confirmed:** ElevenLabs 22% for 12 months (PartnerStack), n8n 30% for 12 months on Cloud (PayPal, paid monthly, min EUR 100; source https://n8n.io/affiliates/), Make 35% for 12 months (Wise, min $100 and 3 paying users).
 - **Possible:** Vercel (affiliate terms exist; 25% recurring reported by third parties, unverified). Manus ~10% (unverified).
 - **No cash programme:** Anthropic, OpenAI, xAI/Grok, Kimi, Gemini, Mistral, DeepSeek, OpenRouter, Perplexity (ended), Cursor (ended), fal.ai, Replicate, Together, Groq. Poe pays creators per message on their own bots, not referrals. Zapier unverified.
 - **Top 5 by fit:** ElevenLabs, n8n, Make, Manus (verify first), Vercel.
 - **Disclosure:** FTC (clear, next to the link), South Africa CPA / ARB (plainly identifiable marketing), X Paid Partnership toggle plus text. Always pair a referral link with the plain link.
 - **Implementation idea:** central links.json and `bots.socialbrand.africa/go/<service>` redirects with click counts; public "How we make money" page. Not built.
 - **Open for PG:** which programmes to join, which accounts, payout details (PG enters them himself), final disclosure wording, legal review.
-- Note: Grok's research file still carries citation placeholders instead of URLs in several table rows.
 
 ## 8. Constraints
 - **Shared usage allowance:** builds run one at a time to stay inside it.

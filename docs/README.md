@@ -3,8 +3,8 @@ Internal working docs for the bots site and the bot rollout. This folder is not 
 
 | Path | What it is |
 |---|---|
-| [pm/pm-pack.md](pm/pm-pack.md) | One-file briefing for PM: mission, standard, recipe, site facts, bots, roadmap, monetisation, constraints and status |
-| [pm/status.json](pm/status.json) | Machine-readable workstream status (done, in_progress, blocked, deployed, planned) |
+| [pm/pm-pack.md](pm/pm-pack.md) | Superseded, kept as history. One-file briefing for PM: mission, standard, recipe, site facts, bots, roadmap, monetisation, constraints and status. Current: business-plan/README.md and pm/status-v3.json |
+| [pm/status.json](pm/status.json) | Superseded by pm/status-v3.json, kept as history. Machine-readable workstream status |
 | [foundry/standard.md](foundry/standard.md) | The bot standard (checks 1-26), copy of the Foundry generator README |
 | [foundry/recipe.md](foundry/recipe.md) | The bot creation recipe, Steps 0-12, run one step at a time |
 | [business-plan/README.md](business-plan/README.md) | Business plan v3 (24-10-2026): goal, offer, revenue, weekly rollout, channels, metrics, risks and PG decisions |
