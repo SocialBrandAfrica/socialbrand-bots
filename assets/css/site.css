@@ -704,7 +704,7 @@ p, li, td, th, dd, figcaption { overflow-wrap: break-word; }
 .tile .tile-sub, .tile .meta, .tile .econ-note, .tile .avatar-note, .tile .flow-foot { color: #D4D4D4; }
 main p.meta { font-size: 1rem; }
 
-/* ---------- Brand terms v1: restrained monochrome hero (Grok-style feel via styling only, no marks) ---------- */
+/* ---------- Brand terms v1: monochrome tile style (used for the independence note; the home hero keeps its magenta/pink colours) ---------- */
 .tile.t-mono { --c: #8A8A8A; background-color: #050505;
   background-image: radial-gradient(140% 100% at 100% 0%, rgba(255,255,255,.07), transparent 60%), linear-gradient(180deg, #0B0B0B, #040404);
   border: 1px solid #262626; }
