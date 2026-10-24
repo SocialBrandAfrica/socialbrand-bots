@@ -32,7 +32,7 @@
 - economy-version.md hard rules now match instructions.md word for word.
 
 ## 0.3.1 — 24-10-2026
-- Live test 01 fixes (see live-test-01.md).
+- Fixes from the first live test.
 - stocktake: OCR upscale + cross-check with page read; sign-in pages marked not measured; shared pools reported once; one-reading burn estimate from time since reset; prepaid credits judged by balance; daily burn target in plan; small cap overage flagged.
 - getting-started: sign-in check per usage page, redirect/shared-pool check, OCR install check, default ledger and screenshot paths.
 - ledger: default path; one line per limit; one-reading estimate.

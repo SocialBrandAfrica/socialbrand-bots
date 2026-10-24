@@ -18,4 +18,3 @@ By SocialBrand · socialbrand.africa.
 - **Works with:** Shared computer browser + OCR, local ledger, optional API scripts (keys stay on box)
 - **Companion:** Grok Bot Setup Coach (https://bots.socialbrand.africa/bots/grok-bot-setup-coach): Sets up each new bot in one sitting so Token Cop can govern the resulting usage.
 - **Install:** Reading and pasting the economy text is the main route; one-click link is secondary and never the headline.
-<!-- Not a trading bot -->
