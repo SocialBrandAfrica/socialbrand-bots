@@ -334,7 +334,7 @@ th { background: #111; font-weight: 700; }
 .mt-1 { margin-top: 0.5rem; }
 .mt-2 { margin-top: 1rem; }
 
-/* ---- Live-site additions (Dzi, 24-10-2026) ---- */
+/* ---- Live-site additions (24-10-2026) ---- */
 a.card { color: inherit; }
 a.card:hover, .card.clickable:hover { border-color: #fff; }
 .card .avatar-img { width: 48px; height: 48px; object-fit: cover; flex-shrink: 0; border: 1px solid var(--border); }
