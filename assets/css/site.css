@@ -346,6 +346,8 @@ a.card:hover, .card.clickable:hover { border-color: #fff; }
 .skip:focus { left: 1rem; top: 1rem; background: #fff; color: #000; padding: .5rem; z-index: 300; }
 .lead { font-size: 1.15rem; color: var(--secondary); max-width: 720px; margin-top: 1.25rem; }
 .lead strong { color: var(--text); }
+.first-job { max-width: 720px; margin-top: 1rem; padding: 0.9rem 1.1rem; border: 1px solid var(--lime); border-radius: 10px; color: var(--text); }
+.first-job .badge { margin-right: 0.4rem; }
 .hero-ctas { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 1.5rem; }
 .caps { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
 .cap { border: 1px solid var(--border); background: #0D0D0D; padding: 1rem; }

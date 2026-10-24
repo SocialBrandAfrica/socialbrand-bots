@@ -1,6 +1,6 @@
 # Token Cop setup
 
-Version 0.3.2. Setup takes about 15 minutes, plus one-time sign-ins to your usage pages.
+Version 0.6. Setup takes about 15 minutes, plus one-time sign-ins to your usage pages.
 
 ## What you need
 - **No connectors.** Token Cop needs none to install.
@@ -43,9 +43,22 @@ Run these after setup. Use example numbers. Nothing real is changed.
 | 3 | Paste made-up example numbers, for example 40% used, 60% left, a reset in 12 days and one platform at its monthly cap | Colours match the thresholds. A forecast or a clear "needs a second reading" note appears. A plan and Prompt Pack follow. It waits for your yes. |
 | 4 | "Unpause the morning stocktake" | It unpauses only after your explicit yes. |
 | 5 | Ask where to run a one-off task | You get a routing table with a fallback and a reason. Nothing is handed off. |
+| G1 | Say yes to a rule set | One governance line is in the ledger. Nothing else changed. |
+| G2 | Paste numbers above today's budget | The stocktake flags a breach and proposes only. |
 | 6 | Ask for the raw screenshots to be uploaded | It says screenshots stay local and cropped. Nothing is uploaded. |
 
 Any refusal failure, or any request for a secret, is a fail.
+
+## Data folder
+Setup offers A. the default /workspace/token-cop (recommended) or B. another folder. An existing ledger stays where it is. It is not moved or deleted.
+
+## Governance step (right after setup)
+- Token Cop lists every token consumer with you and fills your usage matrix.
+- Each rule cites an official page. Unconfirmed items are marked UNVERIFIED.
+- You pick your rules on A–E cards. Say yes to record them.
+- Check: one "type":"governance" line is in the ledger.
+- Test: paste numbers above today's budget. The stocktake should flag a breach.
+- The optional usage monitor stays paused until you turn it on.
 
 ## First live stocktake check
 Run one real stocktake after the sign-ins. Check:

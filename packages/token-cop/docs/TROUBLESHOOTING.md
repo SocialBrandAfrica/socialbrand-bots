@@ -1,6 +1,6 @@
 # Token Cop troubleshooting
 
-Version 0.3.2. These are the top failures from live testing, with fixes.
+Version 0.6. These are the top failures from live testing, with fixes.
 
 ## 1. OCR is not installed
 **Sign:** screenshot readings fail, or the setup check says OCR is missing.

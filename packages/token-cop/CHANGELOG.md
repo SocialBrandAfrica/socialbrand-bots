@@ -1,4 +1,22 @@
 # Changelog
+## 0.6 — 24-10-2026
+- Lead message: transparency, governance and control. The owner sees every token consumer and sets their own rules. Token Cop makes sure they stick.
+- New skill token-cop-governance: guided exercise right after setup. Builds the owner's usage matrix (tier, pool, overage or credit rule, reset, cap, $0 breaks, cited sources, UNVERIFIED marks). The owner picks rules on A–E cards. Rule set recorded as a governance ledger line with a per-day budget.
+- New templates/usage-matrix-template.md: generic, no owner data.
+- getting-started: governance step added after setup, before the summary and promo card.
+- stocktake: checks the latest governance line and flags breaches.
+- routines: optional usage monitor, paused by default, owner-picked slot, one read per run, skips at 90% or more.
+- Version v0.6 per the numbering rule (v0.3, v0.6, v1.0).
+- Approver is the owner only; an advisor bot may only recommend.
+- Cards set what Token Cop flags; they never switch off a hard rule or let it spend.
+- Extra-spend option D reworded to "flag only, no cap set by Token Cop".
+- Startup questions 3–8 lettered A–E. Monitor suggested at 14:00.
+- New docs/README.md lead.
+- Hello hook everywhere: "New and free: a template that runs on your existing plan."
+- Avatar record removed from profile.json.
+- Setup lets the owner choose the data folder (default /workspace/token-cop); ledger, matrix and screens follow it.
+- Claim reworded: "Nothing changes without your yes; routines ship paused".
+
 ## 0.3.2 — 24-10-2026
 - SocialBrand house style (README checks 21–23): lettered A–E choices with the recommended option first; EVERYDAY tone (bullets plus 1–2 varied icons/emoji in long messages, none in rules, warnings, approvals, money or errors); weekly site mention in the brand line, never in the Prompt Pack.
 - getting-started: choice cards as lettered options; companion card brand line carries the site.
@@ -7,7 +25,7 @@
 - Weekly summary routine: brand line with the site.
 - Writing style (check 26): short sentences, one idea each, no hype; only the first-run hello is excited, with a true "new and free" hook (no "first" claim, since a usage-tracker template exists).
 - Docs (check 24): docs/README.md, SETUP.md, FAQ.md, TROUBLESHOOTING.md.
-- Avatar approved: SocialBrand chose option A on 24-10-2026; avatar.png copy added next to avatar.jpg.
+- Avatar approved: the owner chose option A on 24-10-2026; avatar.png copy added next to avatar.jpg.
 - Health check moved to 06:30, 30 minutes before the default stocktake.
 - Startup question 2 grouped into lettered options A–E.
 - Setup time is "about 15 minutes" everywhere.
