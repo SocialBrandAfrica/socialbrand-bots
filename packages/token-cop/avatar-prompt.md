@@ -7,9 +7,9 @@
 
 - **Avatar rule (SocialBrand):** one high-contrast, distinct central object (a shape or tool unique to this bot): white on a dark background, or dark (navy or black) on a light background. Vary the background and accents per bot so the avatars are easy to tell apart. On a colourful background, use white or dark, whichever contrasts more. The central object is always a bold, simple, logo-style shape with no fine detail.
 
-Generate later; show to SocialBrand; revise until approved; then set avatar_approved true with date. Until then avatar_approved remains false.
+Option A was approved on 24-10-2026 (avatar_approved true, avatar_approved_date 24-10-2026). Options B and C are shown as alternatives only.
 
-## Three avatar options (Foundry rule, SocialBrand 24-10-2026: 3 options per bot, all SocialBrand-approved)
+## Three avatar options (Foundry rule: 3 options per bot; option A approved 24-10-2026)
 1. **Option A (primary):** white stopwatch-meter with a red-amber-green ring on solid teal (#0D9488).
 2. **Option B:** black stopwatch-meter, thick strokes, on electric lime (#B6FF00).
 3. **Option C:** white shield-shaped gauge with a single needle on hot pink (#FF2E9A).

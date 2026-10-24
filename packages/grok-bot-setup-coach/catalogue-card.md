@@ -19,4 +19,4 @@ By SocialBrand · socialbrand.africa.
 - **Setup time:** about 20 minutes plus sign-ins
 - **Risk level:** Low. Changes only your own bot, after your OK; never posts or sends.
 - **Companion:** Token Cop (https://bots.socialbrand.africa/bots/token-cop): tracks your Grok usage so limits don't catch you by surprise. Setup Coach gets the bot working; Token Cop keeps the usage sustainable. Gatekeeper (https://x.ai/bot/D03y99U4zXKh0cshnhgah) remains useful once you run several bots and need to govern which bot may use which logged-in site.
-- **Install:** Add to Grok Bot: https://x.ai/bot/duonwBK5SXXQTAy6NNg2r (v1.0 ready; previous published v0.6)
+- **Install:** Add to Grok Bot: https://x.ai/bot/duonwBK5SXXQTAy6NNg2r

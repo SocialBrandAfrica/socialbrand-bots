@@ -15,5 +15,7 @@
     "reason": "Sets up each new bot in one sitting with a backup so Token Cop can govern the resulting shared usage pool."
   },
   "avatar_approved": true,
+  "avatar_approved_date": "24-10-2026",
+  "avatar_approved_option": "A",
   "page": "https://bots.socialbrand.africa/bots/token-cop"
 }
