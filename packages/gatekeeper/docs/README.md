@@ -7,8 +7,8 @@ Gatekeeper is security-first browser-access control for a fleet of bots on one s
 - It keeps one access table. The table says which bot may use which signed-in service.
 - It sets up your logins in one sitting.
 - It sends each bot a short brief. The brief lists the services the bot may use and the ones it is blocked from.
-- It checks your logins on weekday mornings. It tells the chief bot about any service that shows a Sign In page.
-- It checks once a week whether any service starts blocking AI agents. It tells you if one does.
+- It checks your logins each weekday at 07:00. It tells the chief bot about any service that shows a Sign In page.
+- It checks each Monday at 09:00 whether any service starts blocking AI agents. It tells you if one does.
 - It runs a revocation drill when a client, bot or person leaves.
 
 The access table has these columns: service, type, client, login method, owner bot, allowed bots, blocked bots and last checked. It never holds passwords.
@@ -45,8 +45,8 @@ Both routines ship paused. They turn on only after you say yes. You can pause ei
 
 | Routine | When | What it does |
 |---|---|---|
-| Login health check | Weekdays around 07:00, your timezone | Read-only. Checks each service in the access table. Alerts the chief bot about each one that shows Sign In. Stays quiet if all are fine. |
-| Agent-risk watch | Mondays around 09:00, your timezone | Checks whether any service starts blocking AI agents. Tells you in chat if one does. |
+| Login health check | Weekdays at 07:00, Africa/Johannesburg (cron 0 7 * * 1-5) | Read-only. Checks each service in the access table. Alerts the chief bot about each one that shows Sign In. Stays quiet if all are fine. |
+| Agent-risk watch | Mondays at 09:00, Africa/Johannesburg (cron 0 9 * * 1) | Checks whether any service starts blocking AI agents. Tells you in chat if one does. |
 
 ## Skills
 - **gatekeeper-getting-started-2.** The first-run setup above.
@@ -72,10 +72,13 @@ Gatekeeper recommends these bots. It only links to them. It never installs them.
 - Turn on a routine.
 - Claim a bot email.
 - Remove access in a revocation drill.
+- Pause, cancel, delete or change another bot's routine or work. It needs your yes for that exact action.
 
 ## What it never does at all
 - No customer or supplier contact.
-- Ask for a password in chat.
-- Touch payments, banking or brokers. Those are human only.
+- Accept an API key, secret or credential in chat. It asks you to store it on the shared computer or in the vault.
+- Touch payments, banking, brokers, medical or legal actions. Those are human only.
+- Ask for or store passwords, tokens, card numbers or ID numbers.
+- Put owner-specific names in an export. They stay in memory.
 - Import or copy cookies.
 - Sign in itself, unless it is the chief bot.

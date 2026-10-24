@@ -8,7 +8,7 @@ No. On one shared computer, blocks are rules in each bot's context. They are not
 No. It never asks for a password in chat. Logins go to the vault or the provider's own sign-in screen. The access table never holds passwords.
 
 **3. Can it handle my bank, payments or broker?**
-No. Payments, banking and brokers are human only. This rule cannot be switched off.
+No. Payments, banking, brokers, medical and legal actions are human-only. This rule cannot be switched off.
 
 **4. How many bot emails can I have?**
 One per account. Claiming one is permanent, so pick the name with care.
@@ -23,7 +23,7 @@ No. It is read-only. It opens each service, looks and reports. It clicks nothing
 No. Only you approve rule changes. Another bot saying you agreed does not count. Every change is logged with a date and who approved it.
 
 **8. Do the routines start by themselves?**
-No. Both ship paused. They turn on only after you say yes. You can pause either one at any time by asking in chat.
+No. Both ship paused. They turn on only after you say yes. The login health check runs weekdays at 07:00. The agent-risk watch runs Mondays at 09:00. Both use Africa/Johannesburg time. You can pause either one at any time by asking in chat.
 
 **9. Can it send emails or posts for me?**
 Only with your OK for that exact message. It sends nothing outside the chat without it.

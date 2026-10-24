@@ -20,7 +20,7 @@ Version 1.6. These are the five most likely failures and the fix for each.
 **Fix:**
 - Ask Gatekeeper: "Which routines are on?"
 - Say yes to turn on the one you want.
-- Check that the timezone is yours. The times are around 07:00 on weekdays and 09:00 on Mondays.
+- Check the times. The login health check runs weekdays at 07:00 and the agent-risk watch runs Mondays at 09:00, both Africa/Johannesburg. If you live in another timezone, convert these times to yours.
 
 ## 4. The bot email could not be claimed
 **Cause:** the name is taken, or the account already has a bot email.
