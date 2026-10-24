@@ -1,11 +1,11 @@
 {
   "name": "Token Cop",
-  "title": "Token Cop — AI Usage Governance",
-  "description": "By SocialBrand · socialbrand.africa. Stops you hitting AI usage limits too fast with morning stocktakes, capacity-first routing, ready-to-paste briefings and owner-approved actions only.",
+  "title": "Token Cop — Your AI usage, your rules",
+  "description": "By SocialBrand · socialbrand.africa. See every place your AI usage goes. Set your own rules. Token Cop checks them every day and tells you before a limit or a bill catches you out. New and free: a template that runs on your existing plan. Nothing changes without your yes.",
   "category": "Bots and automation",
   "platform": "Grok Bot",
   "publisher": "SocialBrand (socialbrand.africa)",
-  "version": "0.3.2",
+  "version": "0.6",
   "risk_level": "Low",
   "category_id": "DEV-AGENTS",
   "segment": "DEV",
@@ -14,8 +14,5 @@
     "link": "https://bots.socialbrand.africa/bots/grok-bot-setup-coach",
     "reason": "Sets up each new bot in one sitting with a backup so Token Cop can govern the resulting shared usage pool."
   },
-  "avatar_approved": true,
-  "avatar_approved_date": "24-10-2026",
-  "avatar_approved_option": "A",
   "page": "https://bots.socialbrand.africa/bots/token-cop"
 }

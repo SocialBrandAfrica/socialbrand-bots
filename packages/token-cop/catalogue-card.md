@@ -2,12 +2,15 @@
 By SocialBrand · socialbrand.africa.
 - **Name:** Token Cop
 - **Badge:** DEV-AGENTS
-- **Pitch:** Stop hitting AI usage limits by surprise. Morning stocktake, capacity-first routing and ready-to-paste briefings — you approve every pause.
+- **Pitch:** See every token consumer. Set your own rules. Token Cop makes sure they stick. You approve every change.
 - **Selling points:**
-  - Daily forecast so you know by day 1, not day 7
+  - Usage map built with you: pool, overage, reset, cap and what stops at $0, with cited sources
+  - Your rules on A–E cards: daily cap, extra spend, approvals, cadence
+  - Every stocktake checks your rules and flags breaches
+  - Daily forecast from the first stocktake
   - Capacity-first ("use it or lose it") before cheapest model
   - Morning Prompt Pack you copy; bot never sends
-  - Owner-yes on every action; routines ship paused
+  - Nothing changes without your yes; routines ship paused
   - Screenshot+OCR works without admin keys
 - **Category:** DEV-AGENTS · Bots and automation
 - **Setup time:** About 15 minutes plus one-time sign-ins
@@ -15,4 +18,3 @@ By SocialBrand · socialbrand.africa.
 - **Works with:** Shared computer browser + OCR, local ledger, optional API scripts (keys stay on box)
 - **Companion:** Grok Bot Setup Coach (https://bots.socialbrand.africa/bots/grok-bot-setup-coach): Sets up each new bot in one sitting so Token Cop can govern the resulting usage.
 - **Install:** Reading and pasting the economy text is the main route; one-click link is secondary and never the headline.
-<!-- Not a trading bot -->
