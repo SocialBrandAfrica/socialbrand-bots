@@ -346,6 +346,8 @@ a.card:hover, .card.clickable:hover { border-color: #fff; }
 .skip:focus { left: 1rem; top: 1rem; background: #fff; color: #000; padding: .5rem; z-index: 300; }
 .lead { font-size: 1.15rem; color: var(--secondary); max-width: 720px; margin-top: 1.25rem; }
 .lead strong { color: var(--text); }
+.first-job { max-width: 720px; margin-top: 1rem; padding: 0.9rem 1.1rem; border: 1px solid var(--lime); border-radius: 10px; color: var(--text); }
+.first-job .badge { margin-right: 0.4rem; }
 .hero-ctas { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 1.5rem; }
 .caps { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
 .cap { border: 1px solid var(--border); background: #0D0D0D; padding: 1rem; }
@@ -408,3 +410,30 @@ a.card:hover, .card.clickable:hover { border-color: #fff; }
 .toc a:hover { color: #fff; border-color: #fff; }
 .section-block { scroll-margin-top: 80px; }
 @media (max-width: 900px) { .side-panel { position: static; } }
+
+/* How it works: click flow */
+.flow-steps { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 1.5rem; counter-reset: none; }
+.flow-step { position: relative; border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 1rem 1.2rem; background: linear-gradient(160deg, #141414, #0A0A0A); transition: transform .2s ease, border-color .2s ease; }
+.flow-step:hover { transform: translateY(-3px); border-color: var(--cyan); }
+.flow-step h3 { font-size: 1.05rem; margin: .6rem 0 .35rem; }
+.flow-step p { color: var(--secondary); font-size: .9rem; }
+.flow-num { font-family: 'JetBrains Mono', monospace; font-size: .8rem; color: #000; background: var(--lime); border-radius: 999px; padding: .1rem .55rem; margin-right: .5rem; }
+.flow-ico { color: var(--cyan); vertical-align: middle; }
+.flow-step:nth-child(2) .flow-ico, .flow-chip:nth-child(2) .flow-ico { color: var(--pink); }
+.flow-step:nth-child(4) .flow-ico, .flow-chip:nth-child(4) .flow-ico { color: var(--pink); }
+.flow-step:not(:last-child)::after { content: "→"; position: absolute; right: -0.85rem; top: 1.2rem; color: var(--lime); font-weight: 700; }
+.flow-foot { color: var(--secondary); margin-top: 1rem; font-size: .9rem; }
+.flow-foot a { color: var(--cyan); }
+.flow-compact { margin: 1.25rem 0 .5rem; border: 1px solid var(--border); border-radius: 14px; padding: .9rem 1rem; }
+.flow-chips { list-style: none; display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
+.flow-chip { display: flex; align-items: center; gap: .35rem; border: 1px solid var(--border); border-radius: 999px; padding: .3rem .75rem .3rem .35rem; font-size: .85rem; background: #111; }
+.flow-chip .flow-num { margin-right: 0; }
+.flow-chip .flow-ico { width: 18px; height: 18px; }
+@media (prefers-reduced-motion: no-preference) {
+  .flow-step { animation: flow-in .5s ease both; }
+  .flow-step:nth-child(2) { animation-delay: .08s; } .flow-step:nth-child(3) { animation-delay: .16s; }
+  .flow-step:nth-child(4) { animation-delay: .24s; } .flow-step:nth-child(5) { animation-delay: .32s; }
+}
+@keyframes flow-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@media (max-width: 900px) { .flow-steps { grid-template-columns: 1fr 1fr; } .flow-step::after { display: none; } }
+@media (max-width: 600px) { .flow-steps { grid-template-columns: 1fr; } }

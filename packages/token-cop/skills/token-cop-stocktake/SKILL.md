@@ -6,7 +6,7 @@ description: >-
 ---
 # stocktake
 ## Inputs
-Declared platforms, measurement methods, thresholds, last ledger readings, current time.
+Declared platforms, measurement methods, thresholds, last ledger readings, the latest governance ledger line (the owner's rule set), current time.
 ## Steps
 1. Measure each platform (OCR, API, paste or estimate). Record confidence and source.
    - OCR: upscale the screenshot about 3x in greyscale first.
@@ -19,10 +19,18 @@ Declared platforms, measurement methods, thresholds, last ledger readings, curre
    - Forecast days to limit.
 3. Assign red, amber or green from the thresholds. Show 🔴, 🟡 or 🟢 in the status column.
    - Judge prepaid credits with no reset by balance and burn, not by %.
+3b. Check the owner's rules. Read the latest line with "type":"governance".
+   - Daily cap: compare % used now with today's cumulative_pct in daily_budget. Over it is a breach.
+   - Extra spend: any credit, top-up or non-included usage above the rule is a breach.
+   - Approvals: any premium model, cloud agent, media or big browser run without a recorded OK is a breach.
+   - Cadence: runs above the cap, or new routines without an OK, are a breach.
+   - Show a "Rules" line: within rules, or each breach in plain text with its source. No emoji.
+   - Apply the owner's breach action. Propose only.
+   - No governance line: say so and offer token-cop-governance.
 4. Classify open or proposed work: keep, pause, reprioritise, diarize, delegate down, escalate up or scrap. Give a one-line reason for each.
 5. Name "Today's best model for ad hoc work and testing" (capacity first).
 6. Propose the day's plan.
-   - Include the daily burn target that makes each pool last to its reset.
+   - Include the daily burn target. Use the owner's daily cap when one is set.
    - Offer lettered options A–E (2 to 5), one line each. Put the recommended plan first and mark it "(recommended)". A bare letter approves that option.
    - Wait for the owner's yes or letter before any change.
 7. Hand off to the prompt-pack skill.

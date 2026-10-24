@@ -1,9 +1,15 @@
 # Token Cop
 
-Version 0.3.2 · Category DEV-AGENTS · Risk level: Low
+Version 0.6 · Category DEV-AGENTS · Risk level: Low
 
 ## What it does
-Token Cop helps you avoid hitting your AI usage limits too early.
+You see every token consumer. You set your own rules. Token Cop makes sure they stick.
+
+- Right after setup, it maps every place your AI usage goes with you: plan, pool, overage, reset, cap and what stops at $0. Each rule cites an official page. Anything unconfirmed is marked unverified.
+- You pick your rules on lettered cards: a daily cap, no extra spend, approvals for costly models or media, cadence limits.
+- Every stocktake checks those rules and flags any breach.
+
+It also helps you avoid hitting your AI usage limits too early.
 
 - It reads your usage pages each morning.
 - It forecasts how many days are left before each limit.
@@ -49,8 +55,7 @@ Token Cop asks these in order on first run. Each choice uses lettered options. Y
    - B. Strict: propose a pause at amber
    - C. Loose: alert only
 5. **Who approves pauses and hand-offs:**
-   - A. You only (recommended, the default)
-   - B. You plus one named advisor bot
+   - Only you approve. An advisor bot may recommend, never approve.
 6. **Morning stocktake time** (Africa/Johannesburg by default):
    - A. 07:00 (recommended, the default)
    - B. 06:00
@@ -74,9 +79,10 @@ All times are Africa/Johannesburg. Each runs in a flexible window of about ±15 
 | Health check | Daily 06:30 | Checks the last reading is under 36 hours old and the last OCR confidence was not low. Alerts only if something fails. |
 | Morning Token Stocktake | Daily 07:00 (or the time you chose) | Measures each platform, forecasts, classifies work, proposes a plan, writes the Prompt Pack, then waits for your yes. |
 | Weekly summary | Monday 08:00 | Sums up the week: burn, resets, status changes and open proposals. |
+| Usage monitor (optional) | Daily 14:00 suggested, your pick | One usage-page read. Checks your rules. Alerts only on a breach. |
 | Mid-week burn check | Wednesday 12:00 | Quick burn check. Alerts only if a platform has newly turned red. |
 
-**All four routines ship paused.** Only you can unpause them.
+**All routines ship paused, including the optional usage monitor.** Only you can unpause them.
 
 To pause or resume one, ask Token Cop in chat. For example:
 - "Unpause the morning stocktake"
@@ -86,12 +92,13 @@ To pause or resume one, ask Token Cop in chat. For example:
 Token Cop confirms which routine and time before it changes anything.
 
 ## Skills
-Six skills. Each name starts with `token-cop-`.
+Seven skills. Each name starts with `token-cop-`.
 
 | Skill | What it does |
 |---|---|
 | token-cop-getting-started | Runs the startup questions, checks each usage page is signed in, checks OCR is installed, sets up the ledger and crop areas, and shows the companion card once. |
 | token-cop-stocktake | Measures each platform, forecasts days to limit, assigns red, amber or green, classifies open work and proposes the day's plan. |
+| token-cop-governance | Builds your usage matrix with you right after setup, then records the rules you pick on A–E cards. Cards set what Token Cop flags; they never switch off a hard rule or let it spend. |
 | token-cop-routing | Picks a model for a one-off task. Most spare capacity before its reset comes first, then the cheapest capable model. |
 | token-cop-prompt-pack | Writes one ready-to-paste briefing per AI tool you use. |
 | token-cop-ledger | Writes readings to the local ledger, works out burn rates and builds reports. |

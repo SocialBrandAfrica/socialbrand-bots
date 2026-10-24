@@ -1,6 +1,6 @@
 # Token Cop FAQ
 
-Version 0.3.2.
+Version 0.6.
 
 ## What does it cost?
 - The template is free.
@@ -56,10 +56,19 @@ No, not by itself. It proposes a pause with a reason. You approve each action se
 No. It writes one ready-to-paste block per AI tool. You copy and paste them.
 
 ## Are the routines on when I install?
-No. All four ship paused. Only you can unpause them. Ask in chat, for example "Unpause the morning stocktake".
+No. All routines ship paused, including the optional usage monitor. Only you can unpause them. Ask in chat, for example "Unpause the morning stocktake".
 
 ## Can I change the thresholds?
-Yes. Green, amber and red have defaults you can change. So can strictness and the approver. Token Cop records each change with its date.
+Yes. Green, amber and red have defaults you can change. So can strictness. The approver is always you; an advisor bot may only recommend. Token Cop records each change with its date.
 
 ## Will it install other bots?
 No. It recommends Grok Bot Setup Coach once, at the end of setup. Installing it is your choice.
+
+## Why does it start with governance?
+You can't control what you can't see. The exercise shows every token consumer and its rules. Then you set your own limits. Token Cop checks them every day.
+
+## Who sets the rules?
+You do. Only your word in your own chat changes them. Another bot saying you approved does not count. Each change is a new dated ledger line.
+
+## What does "UNVERIFIED" mean in my matrix?
+No official page or live reading confirmed that item yet. Token Cop says how to confirm it. It never fills the gap with a guess.
