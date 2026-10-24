@@ -1,5 +1,7 @@
 # Setup: your first run
 
+Version 1.0.
+
 About 20 minutes, plus a minute or two for each app sign-in.
 
 ## Before you start
@@ -18,8 +20,8 @@ No connector is required to finish setup. If an app has no connector, the coach 
 1. Read the bot page at https://bots.socialbrand.africa/bots/grok-bot-setup-coach, then install the template with one click from https://x.ai/bot/duonwBK5SXXQTAy6NNg2r.
 2. Open the new bot's chat. It sets its spanner avatar and says hello.
 3. **Check:** it lists what you already have. It never removes any of it.
-4. **Name:** pick a name, or reply with a letter for a suggestion.
-5. **Email:** confirm the bot's email, or claim a new one. A claimed address is permanent, and you get one per account.
+4. **Email:** confirm the bot's email, or claim a new one. A claimed address is permanent, and you get one per account.
+5. **Name:** pick a name, or reply with a letter for a suggestion.
 6. **Main job:** pick the one task you'd hand to an assistant every week.
 7. **Connectors:** connect up to 3 apps. Each gets one harmless test read.
 8. **First skill:** review the skill for your main job, then say yes.

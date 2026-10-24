@@ -1,5 +1,7 @@
 # FAQ
 
+Version 1.0.
+
 **Does Setup Coach cost anything?**
 It adds no fees of its own. It uses your Grok Bot plan's usage, like any bot.
 

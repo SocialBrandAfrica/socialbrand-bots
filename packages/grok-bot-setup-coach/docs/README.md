@@ -1,11 +1,13 @@
 # Grok Bot Setup Coach
 
+Version 1.0.
+
 By SocialBrand · socialbrand.africa · https://bots.socialbrand.africa
 
 ## What it does
 Setup Coach gets a new Grok Bot working in one sitting. It walks you through:
-- a name for your bot
 - the bot's own email address
+- a name for your bot
 - up to 3 connected apps
 - a first skill for your main job
 - a first routine that runs on its own
@@ -25,12 +27,12 @@ https://bots.socialbrand.africa/bots/grok-bot-setup-coach
 Open the template link and add it to your Grok Bot:
 https://x.ai/bot/duonwBK5SXXQTAy6NNg2r
 
-The link opens the latest version once SocialBrand has published it.
+The link installs the latest published version (v1.0).
 
 ## Startup questions
 The coach asks one question at a time, as lettered options A to E:
-1. What should your bot be called?
-2. Which email address should the bot use, and what goes to it?
+1. Which email address should the bot use, and what goes to it?
+2. What should your bot be called?
 3. What's the one thing you'd hand to an assistant every week?
 4. Which apps does that job need (up to 3)?
 5. Which first routine do you want, and at what time?
@@ -61,7 +63,7 @@ Your first routine runs at most 2 times a day by default.
 
 ## Companion bots
 - **Token Cop** (https://bots.socialbrand.africa/bots/token-cop): tracks your Grok usage so limits don't catch you by surprise. The coach shows its card once at the end of setup.
-- **Gatekeeper** (https://x.ai/bot/D03y99U4zXKh0cshnhgah): governs which bot may use which logged-in site. The coach mentions it only if you run several bots.
+- **Gatekeeper** (https://bots.socialbrand.africa/bots/gatekeeper): governs which bot may use which logged-in site. The coach mentions it only if you run several bots.
 
 The coach recommends these. It never installs them.
 

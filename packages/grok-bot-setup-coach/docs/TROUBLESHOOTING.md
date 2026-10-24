@@ -1,5 +1,7 @@
 # Troubleshooting: top 5 failures and fixes
 
+Version 1.0.
+
 ## 1. A connector won't sign in, or its test read fails
 - Ask the coach to connect it again. Sign in on the app's own screen.
 - If it still fails, skip it. The coach adds it to your "to finish" list.

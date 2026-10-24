@@ -9,7 +9,7 @@ Version 1.6. This guide covers the first run and a short test.
 - Keep your phone close. Some sign-ins need a 2FA code or a passkey. Only you can do those steps.
 
 ## First run, step by step
-1. Install Gatekeeper from https://bots.socialbrand.africa/bots/gatekeeper. Or paste the economy text into a new Grok Bot.
+1. Install Gatekeeper in one click: https://x.ai/bot/D03y99U4zXKh0cshnhgah. Or paste the economy text into a new Grok Bot. The info page is https://bots.socialbrand.africa/bots/gatekeeper.
 2. Send any first message. Gatekeeper starts its setup on this turn.
 3. **Bot email.** Gatekeeper checks for a bot email. If there is none, it suggests a name. It claims the address only after you agree. A claim is permanent. Each account gets one bot email. Then pick the tasks that go through it.
 4. **Name and chief bot.** Tell it what to call you. Pick the chief bot from the list. If you run no other bots, Gatekeeper is its own chief bot.

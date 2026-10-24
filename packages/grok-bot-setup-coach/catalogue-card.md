@@ -5,7 +5,7 @@ By SocialBrand · socialbrand.africa.
 - **Category:** PA-DESK · Desk and setup
 - **Pitch:** Your bot, actually working, in one sitting.
 - **Selling points:**
-  1. Email, connectors, a first skill and a first routine, set up with you in about 20 minutes plus sign-ins (to confirm in testing).
+  1. Email, connectors, a first skill and a first routine, set up with you in about 20 minutes plus sign-ins.
   2. A weekly backup and a monthly checkup, so your setup doesn't quietly break.
   3. A shareable "my bot" card. Nothing private on it.
 - **Why it wins:**
@@ -18,5 +18,5 @@ By SocialBrand · socialbrand.africa.
   7. Adds, never removes: your setup stays safe.
 - **Setup time:** about 20 minutes plus sign-ins
 - **Risk level:** Low. Changes only your own bot, after your OK; never posts or sends.
-- **Companion:** Token Cop (https://bots.socialbrand.africa/bots/token-cop): tracks your Grok usage so limits don't catch you by surprise. Setup Coach gets the bot working; Token Cop keeps the usage sustainable. Gatekeeper (https://x.ai/bot/D03y99U4zXKh0cshnhgah) remains useful once you run several bots and need to govern which bot may use which logged-in site.
-- **Install:** Add to Grok Bot: https://x.ai/bot/duonwBK5SXXQTAy6NNg2r
+- **Companion:** Token Cop (https://bots.socialbrand.africa/bots/token-cop): tracks your Grok usage so limits don't catch you by surprise. Setup Coach gets the bot working; Token Cop keeps the usage sustainable. Gatekeeper (https://bots.socialbrand.africa/bots/gatekeeper) remains useful once you run several bots and need to govern which bot may use which logged-in site.
+- **Install:** Add to Grok Bot: https://x.ai/bot/duonwBK5SXXQTAy6NNg2r (v1.0)

@@ -20,7 +20,9 @@ The access table has these columns: service, type, client, login method, owner b
 - You work for more than one client and want to keep them apart.
 
 ## Install
-One-click install: https://bots.socialbrand.africa/bots/gatekeeper
+One-click install: https://x.ai/bot/D03y99U4zXKh0cshnhgah
+
+Info page (full text, docs and updates): https://bots.socialbrand.africa/bots/gatekeeper
 
 You can also paste the economy text into a new Grok Bot.
 
