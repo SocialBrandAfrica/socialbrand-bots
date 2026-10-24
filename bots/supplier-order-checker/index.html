@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Supplier Order Checker v0.3 · SocialBrand Bots</title>
 <meta name="description" content="Checks every supplier invoice against your order before you pay it. Flags short deliveries, substitutions, price rises and missing credits, and drafts the claim. Free, full open text. By SocialBrand.">
@@ -30,6 +31,8 @@
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav">
   <a href="/" class="logo">SocialBrand Bots<span class="dot">.</span></a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu"><span class="bars" aria-hidden="true"></span></button>
+  <div class="nav-menu" id="nav-menu">
   <div class="nav-links">
     <a href="/#catalogue">Bots</a>
     <a href="/#categories">Categories</a>
@@ -39,19 +42,27 @@
   </div>
   <button class="search-pill" type="button" onclick="var i=document.getElementById('hero-search'); if(i){i.focus();}else{location.href='/#catalogue';}">Search… <kbd>Ctrl K</kbd></button>
   <a href="https://x.com/Soc_Bran_Africa" target="_blank" rel="noopener" class="x-link">X</a>
+  </div>
 </nav>
 <div class="banner shared-banner" id="shared-banner"><div class="inner" id="shared-banner-text"></div></div>
 <div class="banner soon"><div class="inner">Coming soon. This bot is still in build and testing. The text below is the working draft, shared openly.</div></div>
 <main id="main">
-  <section class="hero" style="padding-bottom:1rem;">
+  <section class="hero bot-hero">
     <div class="eyebrow cyan">OWN-OPS · Grok Bot · v0.3</div>
     <h1>SUPPLIER ORDER<br><span class="neon" style="background:var(--lime); color:#000; text-shadow:3px 3px 0 #fff;">CHECKER</span></h1>
-    <p class="lead">Checks every supplier invoice against your order before you pay it. Flags short deliveries, substitutions, price rises and missing credits, and drafts the claim.</p>
-    <div class="trust-badges"><span class="badge strong">v0.3</span><span class="badge">Last updated 24-10-2026</span><span class="badge">In build · not yet published</span><span class="badge">By SocialBrand · socialbrand.africa</span></div>
-    <div style="margin-top:1rem; display:flex; gap:0.5rem; flex-wrap:wrap;">
-      <button class="upvote" type="button" data-upvote="supplier-order-checker" aria-pressed="false">▲ Upvote</button>
-      <button class="btn-primary" type="button" data-share="supplier-order-checker" data-name="Supplier Order Checker" data-version="v0.3" data-pitch="Checks every supplier invoice against your order before you pay it. Flags short deliveries, substitutions, price rises and missing credits, and drafts the claim." data-avatar="/assets/img/bots/supplier-order-checker/A.jpg">Share</button>
-      <a class="btn-secondary" href="/#catalogue">← Catalogue</a>
+    <div class="bento summary">
+      <div class="tile reveal c-teal h2 m-full t-full d-3 sum-what"><div class="tile-label">What it does</div><p class="lead">Checks every supplier invoice against your order before you pay it. Flags short deliveries, substitutions, price rises and missing credits, and drafts the claim.</p></div>
+      <div class="tile lift reveal hot c-lime m-full d-1 sum-ver"><div class="tile-label">Version</div><div class="big">v0.3</div><div class="tile-sub">Last updated 24-10-2026</div></div>
+      <a class="tile lift reveal c-amb h2 d-1 sum-num" href="#routines"><div class="tile-label">Routines</div><div class="big">3</div><div class="tile-sub">In build</div></a>
+      <a class="tile lift reveal c-vio h2 d-1 sum-num" href="#skills"><div class="tile-label">Skills</div><div class="big">4</div><div class="tile-sub">Full open text</div></a>
+      <div class="tile reveal c-mag h2 m-full d-2 sum-install"><div class="tile-label">Install</div><p class="small">Main route: copy the economy text or the full text and paste it into a new Grok Bot. One-click is secondary.</p><div class="install-box" data-install="supplier-order-checker"><span class="install-soon">Install link coming soon</span></div></div>
+      <div class="tile reveal c-blue h1 m-full t-full d-4 sum-act"><div class="trust-badges"><span class="badge strong">v0.3</span><span class="badge">Last updated 24-10-2026</span><span class="badge">In build · not yet published</span><span class="badge">By SocialBrand · socialbrand.africa</span></div>
+        <div class="hero-actions">
+          <button class="upvote" type="button" data-upvote="supplier-order-checker" aria-pressed="false">▲ Upvote</button>
+          <button class="btn-primary" type="button" data-share="supplier-order-checker" data-name="Supplier Order Checker" data-version="v0.3" data-pitch="Checks every supplier invoice against your order before you pay it. Flags short deliveries, substitutions, price rises and missing credits, and drafts the claim." data-avatar="/assets/img/bots/supplier-order-checker/A.jpg">Share</button>
+          <a class="btn-secondary" href="/#catalogue">← Catalogue</a>
+        </div></div>
+      
     </div>
     <nav class="toc" aria-label="On this page"><a href="#economy">Economy text</a><a href="#profile">Profile</a><a href="#instructions">Instructions</a><a href="#skills">Skills</a><a href="#routines">Routines</a><a href="#avatar">Avatar</a><a href="#selling">Selling points</a><a href="#companion">Companion</a></nav>
     <section class="flow-compact" aria-label="How it works">
@@ -62,23 +73,23 @@
   </section>
   <div class="bot-layout">
     <div class="main">
-      <section class="section-block economy" id="economy">
+      <section class="section-block economy tile reveal c-lime h2" id="economy">
         <div class="header-row"><h2 class="neon-header lime">Economy text · paste to run</h2></div>
-        <p class="econ-note" style="padding-top:.9rem;">Economy text coming soon. Until then, copy the full text in the sections below.</p>
+        <p class="econ-note">Economy text coming soon. Until then, copy the full text in the sections below.</p>
       </section>
-      <section class="section-block" id="profile">
+      <section class="section-block tile reveal c-mag h1" id="profile">
         <div class="header-row"><h2 class="neon-header pink">Profile</h2><div><button class="copy-btn" type="button" data-copy="profile-text">Copy</button></div></div>
-<pre class="block-text" id="profile-text">Supplier Order Checker: Checks supplier invoices before you pay
+<details class="fold" data-fold-mobile open><summary class="fold-sum"><span class="when-closed">Show all</span><span class="when-open">Show less</span></summary><div class="fold-body"><pre class="block-text" id="profile-text">Supplier Order Checker: Checks supplier invoices before you pay
 By SocialBrand · socialbrand.africa. For independent grocery and convenience stores. Compares every supplier invoice or delivery note with your order, flags short deliveries, substitutions, price rises and missing credits in rand, and drafts the claim for you to send. Never pays, approves or contacts anyone.
 Category: OWN-OPS · Orders and stock
 Version: 0.3 (first release, in build) · Risk: Low (read and flag only)
 Platform: Grok Bot
 Publisher: SocialBrand (socialbrand.africa)
-Companion: Gatekeeper (https://bots.socialbrand.africa/bots/gatekeeper)</pre>
+Companion: Gatekeeper (https://bots.socialbrand.africa/bots/gatekeeper)</pre></div></details>
       </section>
-      <section class="section-block" id="instructions">
+      <section class="section-block tile reveal c-lime h1" id="instructions">
         <div class="header-row"><h2 class="neon-header lime">Instructions</h2><div><button class="copy-btn" type="button" data-copy="instr-text">Copy</button></div></div>
-<pre class="block-text truncated" id="instr-text"># Supplier Order Checker — instructions
+<details class="fold" data-fold-mobile open><summary class="fold-sum"><span class="when-closed">Show all</span><span class="when-open">Show less</span></summary><div class="fold-body"><pre class="block-text truncated" id="instr-text"># Supplier Order Checker — instructions
 
 ## Role
 You are the owner&#x27;s receiving clerk with a calculator. For every supplier delivery you compare the invoice or delivery note with the purchase order (and the received count when the owner gives one), flag every difference in rand, and draft the claim. You are precise, calm and never accuse a supplier; differences are &quot;to check&quot;, not &quot;fraud&quot;.
@@ -111,9 +122,9 @@ English, short. Amounts in rand (R 1 234,50). Dates DD-MM-YYYY. A flag line read
 
 ## Companion bot
 When the owner runs more than one store bot, recommend Gatekeeper (https://x.ai/bot/D03y99U4zXKh0cshnhgah). Keeps your store bots on only the supplier and email sites they need. Recommend only; never install it for the owner.
-</pre><button class="show-all" type="button" data-toggle="instr-text">Show all</button>
+</pre><button class="show-all" type="button" data-toggle="instr-text">Show all</button></div></details>
       </section>
-      <section class="section-block" id="skills">
+      <section class="section-block tile reveal c-teal h1" id="skills">
         <div class="header-row"><h2 class="neon-header cyan">Skills · 4</h2><div><button class="copy-btn" type="button" data-copy="skills-all">Copy</button></div></div>
         <div class="skill-full">
           <div class="skill-head"><div><span class="skill-name">getting-started</span><div class="skill-desc">First conversation with a new owner. Runs the one-sitting setup, bot email first.</div></div><button class="copy-btn" type="button" data-copy="skill-1">Copy</button></div>
@@ -301,9 +312,9 @@ A table per supplier, then a &quot;chase this week&quot; list. If nothing happen
 Read-only. Never contacts suppliers.
 </textarea>
       </section>
-      <section class="section-block" id="routines">
+      <section class="section-block tile reveal c-mag h1" id="routines">
         <div class="header-row"><h2 class="neon-header pink">Routines</h2><div><button class="copy-btn" type="button" data-copy="routines-text">Copy</button></div></div>
-<div class="table-wrap"><table><thead><tr><th>Name</th><th>Cron</th><th>Timing</th><th>Prompt</th><th>Output</th></tr></thead><tbody><tr><td>Daily invoice check (health/check routine)</td><td>0 16 * * 1-5</td><td>Weekdays 16:00</td><td>&quot;Run invoice-check on every invoice and delivery note received in the bot inbox since the last run. Send the owner one flag list. If nothing needs attention, send nothing.&quot;</td><td>One flag message, or silence</td></tr><tr><td>Weekly supplier scorecard</td><td>0 8 * * 1</td><td>Monday 08:00</td><td>&quot;Run supplier-scorecard for the last 7 days and list credits to chase.&quot;</td><td>One scorecard message</td></tr><tr><td>Inbox health check</td><td>0 7 * * 1</td><td>Monday 07:00</td><td>&quot;Check the bot inbox and order source are reachable and the last invoice was read in the past 7 days. Tell the owner only if something is broken or silent.&quot;</td><td>Alert only on failure</td></tr></tbody></table></div><div class="paused-note">All routines ship paused. Timezone: Africa/Johannesburg.</div><textarea class="hidden" id="routines-text" aria-hidden="true" tabindex="-1"># Routines (timezone: Africa/Johannesburg)
+<div class="table-wrap"><table><thead><tr><th>Name</th><th>Cron</th><th>Timing</th><th>Prompt</th><th>Output</th></tr></thead><tbody><tr><td data-label="Name">Daily invoice check (health/check routine)</td><td data-label="Cron">0 16 * * 1-5</td><td data-label="Timing">Weekdays 16:00</td><td data-label="Prompt">&quot;Run invoice-check on every invoice and delivery note received in the bot inbox since the last run. Send the owner one flag list. If nothing needs attention, send nothing.&quot;</td><td data-label="Output">One flag message, or silence</td></tr><tr><td data-label="Name">Weekly supplier scorecard</td><td data-label="Cron">0 8 * * 1</td><td data-label="Timing">Monday 08:00</td><td data-label="Prompt">&quot;Run supplier-scorecard for the last 7 days and list credits to chase.&quot;</td><td data-label="Output">One scorecard message</td></tr><tr><td data-label="Name">Inbox health check</td><td data-label="Cron">0 7 * * 1</td><td data-label="Timing">Monday 07:00</td><td data-label="Prompt">&quot;Check the bot inbox and order source are reachable and the last invoice was read in the past 7 days. Tell the owner only if something is broken or silent.&quot;</td><td data-label="Output">Alert only on failure</td></tr></tbody></table></div><div class="paused-note">All routines ship paused. Timezone: Africa/Johannesburg.</div><textarea class="hidden" id="routines-text" aria-hidden="true" tabindex="-1"># Routines (timezone: Africa/Johannesburg)
 
 | Name | Cron | Timing | Prompt | Output |
 |---|---|---|---|---|
@@ -312,9 +323,9 @@ Read-only. Never contacts suppliers.
 | Inbox health check | `0 7 * * 1` | Monday 07:00 | &quot;Check the bot inbox and order source are reachable and the last invoice was read in the past 7 days. Tell the owner only if something is broken or silent.&quot; | Alert only on failure |
 </textarea>
       </section>
-      <section class="section-block" id="avatar">
+      <section class="section-block tile reveal c-lime h1" id="avatar">
         <div class="header-row"><h2 class="neon-header lime">Avatar</h2><div><button class="copy-btn" type="button" data-copy="avatar-prompt">Copy prompt</button></div></div>
-<p style="font-size:0.85rem; color:var(--secondary); margin-bottom:0.5rem;">The approved avatar. Installed bots download it from https://bots.socialbrand.africa/bots/supplier-order-checker/avatar.png.</p><div class="avatar-options"><figure class="avatar-opt"><img src="/assets/img/bots/supplier-order-checker/A.jpg" alt="Supplier Order Checker avatar option Shipping box with an orange label (approved 24-10-2026)" width="140" height="140" loading="lazy"><figcaption class="avatar-label">Shipping box with an orange label (approved 24-10-2026)</figcaption></figure></div><pre class="block-text truncated" id="avatar-prompt"># Avatar prompt (category style guide)
+<p class="avatar-note">The approved avatar. Installed bots download it from https://bots.socialbrand.africa/bots/supplier-order-checker/avatar.png.</p><div class="avatar-options"><figure class="avatar-opt"><img src="/assets/img/bots/supplier-order-checker/A.jpg" alt="Supplier Order Checker avatar · Shipping box with an orange label (approved 24-10-2026)" width="140" height="140" loading="lazy"><figcaption class="avatar-label">Shipping box with an orange label (approved 24-10-2026)</figcaption></figure></div><pre class="block-text truncated" id="avatar-prompt"># Avatar prompt (category style guide)
 - Category: OWN-OPS (Store and operations). The category sets the symbol family and colours. See the avatar style guide.
 - Approved avatar: avatars/approved.png (Shipping box with an orange label).
 - Prompt used:
@@ -326,7 +337,7 @@ Flat vector app icon, square, full-bleed solid charcoal background (#1F2937). On
 - Status: style-guide avatar approved by SocialBrand on 24-10-2026. This bot had no avatar before.
 </pre><button class="show-all" type="button" data-toggle="avatar-prompt">Show all</button>
       </section>
-      <section class="section-block" id="selling">
+      <section class="section-block tile reveal c-teal h1" id="selling">
         <div class="header-row"><h2 class="neon-header cyan">Selling points</h2><div><button class="copy-btn" type="button" data-copy="selling-text">Copy</button></div></div>
 <pre class="block-text" id="selling-text">By SocialBrand · socialbrand.africa.
 - **Name:** Supplier Order Checker
@@ -343,7 +354,7 @@ Flat vector app icon, square, full-bleed solid charcoal background (#1F2937). On
 - **Companion:** Gatekeeper (https://x.ai/bot/D03y99U4zXKh0cshnhgah): Keeps your store bots on only the supplier and email sites they need. Interim: switch to Order Builder when it exists.
 - **Install:** Add to Grok Bot (link comes with the first release)</pre>
       </section>
-      <section class="companion-promo cyan" id="companion">
+      <section class="companion-promo reveal cyan" id="companion">
         <div class="avatar-lg"><img src="/assets/img/bots/gatekeeper/A.jpg" alt="Gatekeeper avatar" width="140" height="140" loading="lazy"></div>
         <div>
           <div class="eyebrow">Companion bot · Gatekeeper</div>
@@ -356,7 +367,7 @@ Flat vector app icon, square, full-bleed solid charcoal background (#1F2937). On
         </div>
       </section>
     </div>
-    <aside class="side-panel">
+    <aside class="side-panel tile reveal c-teal h1">
       <h4>Can access</h4><ul><li>The bot&#x27;s own inbox, for forwarded invoices and delivery notes</li><li>Cloud drives or docs where orders or price lists are kept (optional)</li><li>Order and stock exports or photos (never a login)</li><li>Alerts to you only</li></ul>
       <h4>Cannot access</h4><ul><li>Supplier, rep or customer contact</li><li>Paying, approving or rejecting invoices</li><li>Banking details, payments, brokers</li><li>Passwords, tokens, card or ID numbers; supplier-portal logins</li></ul>
       <h4>Hard rules</h4><ul><li>Flag only. You decide.</li><li>Claims are drafts; you send them.</li><li>One flag message a day, only when needed.</li><li>Supplier and store names never leave your memory.</li></ul>
@@ -374,7 +385,7 @@ Flat vector app icon, square, full-bleed solid charcoal background (#1F2937). On
       <strong id="share-title">Share</strong>
       <button class="close-x" type="button" data-close-share aria-label="Close">×</button>
     </div>
-    <p style="font-size:0.85rem; color:var(--secondary); margin:0.75rem 0;">Make your own version. It looks exactly like ours but carries your name and handle, so the find is yours. The SocialBrand line and site link stay. No points, no leaderboard.</p>
+    <p class="modal-note">Make your own version. It looks exactly like ours but carries your name and handle, so the find is yours. The SocialBrand line and site link stay. No points, no leaderboard.</p>
     <label for="share-name">Your name (optional)</label>
     <input id="share-name" type="text" maxlength="40" placeholder="Your name" autocomplete="name">
     <label for="share-handle">Your handle</label>
@@ -385,7 +396,7 @@ Flat vector app icon, square, full-bleed solid charcoal background (#1F2937). On
         <img id="share-avatar" class="avatar-img" src="/apple-touch-icon.png" alt="">
         <div><strong id="share-bot-name"></strong><div class="meta" id="share-bot-meta"></div></div>
       </div>
-      <p style="font-size:0.85rem; color:var(--secondary);" id="share-bot-pitch"></p>
+      <p class="modal-note" id="share-bot-pitch"></p>
       <div class="meta" style="margin-top:0.5rem;" id="share-url">bots.socialbrand.africa</div>
     </div>
     <div class="row">

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Grok Bot Setup Coach v1.0 · SocialBrand Bots</title>
 <meta name="description" content="New: your bot, actually working, in one sitting. Bot email, connectors, a first skill, a first routine, a weekly backup and a shareable my-bot card. Free, full open text. By SocialBrand.">
@@ -30,6 +31,8 @@
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav">
   <a href="/" class="logo">SocialBrand Bots<span class="dot">.</span></a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu"><span class="bars" aria-hidden="true"></span></button>
+  <div class="nav-menu" id="nav-menu">
   <div class="nav-links">
     <a href="/#catalogue">Bots</a>
     <a href="/#categories">Categories</a>
@@ -39,19 +42,27 @@
   </div>
   <button class="search-pill" type="button" onclick="var i=document.getElementById('hero-search'); if(i){i.focus();}else{location.href='/#catalogue';}">Search… <kbd>Ctrl K</kbd></button>
   <a href="https://x.com/Soc_Bran_Africa" target="_blank" rel="noopener" class="x-link">X</a>
+  </div>
 </nav>
 <div class="banner shared-banner" id="shared-banner"><div class="inner" id="shared-banner-text"></div></div>
 
 <main id="main">
-  <section class="hero" style="padding-bottom:1rem;">
+  <section class="hero bot-hero">
     <div class="eyebrow cyan">PA-DESK · Grok Bot · v1.0</div>
     <h1>SETUP COACH<br><span class="neon" style="background:var(--lime); color:#000; text-shadow:3px 3px 0 #fff;">ONE SITTING</span></h1>
-    <p class="lead">New: your bot, actually working, in one sitting. Bot email, connectors, a first skill, a first routine, a weekly backup and a shareable my-bot card.</p>
-    <div class="trust-badges"><span class="badge strong">v1.0</span><span class="badge">Last updated 24-10-2026</span><span class="badge strong">Full open text</span><span class="badge strong">Routines ship paused</span><span class="badge">By SocialBrand · socialbrand.africa</span></div>
-    <div style="margin-top:1rem; display:flex; gap:0.5rem; flex-wrap:wrap;">
-      <button class="upvote" type="button" data-upvote="grok-bot-setup-coach" aria-pressed="false">▲ Upvote</button>
-      <button class="btn-primary" type="button" data-share="grok-bot-setup-coach" data-name="Grok Bot Setup Coach" data-version="v1.0" data-pitch="New: your bot, actually working, in one sitting. Bot email, connectors, a first skill, a first routine, a weekly backup and a shareable my-bot card." data-avatar="/assets/img/bots/grok-bot-setup-coach/A.jpg">Share</button>
-      <a class="btn-secondary" href="/#catalogue">← Catalogue</a>
+    <div class="bento summary">
+      <div class="tile reveal c-teal h2 m-full t-full d-3 sum-what"><div class="tile-label">What it does</div><p class="lead">New: your bot, actually working, in one sitting. Bot email, connectors, a first skill, a first routine, a weekly backup and a shareable my-bot card.</p></div>
+      <div class="tile lift reveal hot c-lime m-full d-1 sum-ver"><div class="tile-label">Version</div><div class="big">v1.0</div><div class="tile-sub">Last updated 24-10-2026</div></div>
+      <a class="tile lift reveal c-amb h2 d-1 sum-num" href="#routines"><div class="tile-label">Routines</div><div class="big">3</div><div class="tile-sub">Routines ship paused</div></a>
+      <a class="tile lift reveal c-vio h2 d-1 sum-num" href="#skills"><div class="tile-label">Skills</div><div class="big">5</div><div class="tile-sub">Full open text</div></a>
+      <div class="tile reveal c-mag h2 m-full d-2 sum-install"><div class="tile-label">Install</div><p class="small">Main route: copy the economy text or the full text and paste it into a new Grok Bot. One-click is secondary.</p><div class="install-box" data-install="grok-bot-setup-coach"><a class="btn-secondary" href="https://x.ai/bot/duonwBK5SXXQTAy6NNg2r" target="_blank" rel="noopener">One-click install (secondary)</a></div></div>
+      <div class="tile reveal c-blue h1 m-full t-full d-4 sum-act"><div class="trust-badges"><span class="badge strong">v1.0</span><span class="badge">Last updated 24-10-2026</span><span class="badge strong">Full open text</span><span class="badge strong">Routines ship paused</span><span class="badge">By SocialBrand · socialbrand.africa</span></div>
+        <div class="hero-actions">
+          <button class="upvote" type="button" data-upvote="grok-bot-setup-coach" aria-pressed="false">▲ Upvote</button>
+          <button class="btn-primary" type="button" data-share="grok-bot-setup-coach" data-name="Grok Bot Setup Coach" data-version="v1.0" data-pitch="New: your bot, actually working, in one sitting. Bot email, connectors, a first skill, a first routine, a weekly backup and a shareable my-bot card." data-avatar="/assets/img/bots/grok-bot-setup-coach/A.jpg">Share</button>
+          <a class="btn-secondary" href="/#catalogue">← Catalogue</a>
+        </div></div>
+      
     </div>
     <nav class="toc" aria-label="On this page"><a href="#economy">Economy text</a><a href="#profile">Profile</a><a href="#instructions">Instructions</a><a href="#skills">Skills</a><a href="#routines">Routines</a><a href="#avatar">Avatar</a><a href="#selling">Selling points</a><a href="#docs">Docs</a><a href="#companion">Companion</a></nav>
     <section class="flow-compact" aria-label="How it works">
@@ -62,9 +73,9 @@
   </section>
   <div class="bot-layout">
     <div class="main">
-      <section class="section-block economy" id="economy">
+      <section class="section-block economy tile reveal c-lime h2" id="economy">
         <div class="header-row"><h2 class="neon-header lime">Economy text · paste to run</h2><button class="copy-btn" type="button" data-copy="economy-text">Copy</button></div>
-        <pre class="block-text truncated" id="economy-text"># Economy version (Open-Text Publishing)
+        <details class="fold" data-fold-mobile open><summary class="fold-sum"><span class="when-closed">Show all</span><span class="when-open">Show less</span></summary><div class="fold-body"><pre class="block-text truncated" id="economy-text"># Economy version (Open-Text Publishing)
 By SocialBrand · socialbrand.africa.
 
 Self-contained text for an X post or paste. Works on its own. Full safety and hard rules kept. One-click install link is present but never the headline.
@@ -92,22 +103,22 @@ Companion: Token Cop (https://bots.socialbrand.africa/bots/token-cop) tracks you
 Bot page: https://bots.socialbrand.africa/bots/grok-bot-setup-coach  
 One-click install (optional, v1.0): https://x.ai/bot/duonwBK5SXXQTAy6NNg2r  
 Or paste this text into a new Grok Bot.
-</pre><button class="show-all" type="button" data-toggle="economy-text">Show all</button>
+</pre><button class="show-all" type="button" data-toggle="economy-text">Show all</button></div></details>
         <p class="econ-note">The short version that works on its own and keeps every safety and hard rule. This is the text we post on X. The full text is below.</p>
       </section>
-      <section class="section-block" id="profile">
+      <section class="section-block tile reveal c-mag h1" id="profile">
         <div class="header-row"><h2 class="neon-header pink">Profile</h2><div><button class="copy-btn" type="button" data-copy="profile-text">Copy</button></div></div>
-<pre class="block-text" id="profile-text">Grok Bot Setup Coach: Your bot, actually working, in one sitting
+<details class="fold" data-fold-mobile open><summary class="fold-sum"><span class="when-closed">Show all</span><span class="when-open">Show less</span></summary><div class="fold-body"><pre class="block-text" id="profile-text">Grok Bot Setup Coach: Your bot, actually working, in one sitting
 By SocialBrand · socialbrand.africa. Walks a new owner through a working Grok Bot setup in one sitting: bot email, connectors, a first skill, a first routine, a weekly backup, an avatar and a shareable &#x27;my bot&#x27; card. Shows every change before making it and never removes what you already have.
 Category: PA-DESK · Desk and setup
 Version: 1.0 · Risk: Low (changes only your own bot, with your OK)
 Platform: Grok Bot
 Publisher: SocialBrand (socialbrand.africa)
-Companion: Token Cop (https://bots.socialbrand.africa/bots/token-cop)</pre>
+Companion: Token Cop (https://bots.socialbrand.africa/bots/token-cop)</pre></div></details>
       </section>
-      <section class="section-block" id="instructions">
+      <section class="section-block tile reveal c-lime h1" id="instructions">
         <div class="header-row"><h2 class="neon-header lime">Instructions</h2><div><button class="copy-btn" type="button" data-copy="instr-text">Copy</button></div></div>
-<pre class="block-text truncated" id="instr-text"># Grok Bot Setup Coach — instructions
+<details class="fold" data-fold-mobile open><summary class="fold-sum"><span class="when-closed">Show all</span><span class="when-open">Show less</span></summary><div class="fold-body"><pre class="block-text truncated" id="instr-text"># Grok Bot Setup Coach — instructions
 
 ## Role
 You are a patient setup coach. You turn a new owner&#x27;s bot into a working setup in one sitting. One question at a time, short steps, plain English. At the end, celebrate and offer the share card.
@@ -157,9 +168,9 @@ Secondary mention: Gatekeeper (https://bots.socialbrand.africa/bots/gatekeeper).
 Background: coral #F97316. High-contrast simple meter or gauge icon (white or black as needed). No people, no logos.
 
 The monthly checkup routine may re-show the same card once if the owner has not yet installed Token Cop. Never invent usage numbers. Mark confidence (high/medium/low) and source if any usage data is discussed. Flag possible metering glitches if a percentage drops without a reset.
-</pre><button class="show-all" type="button" data-toggle="instr-text">Show all</button>
+</pre><button class="show-all" type="button" data-toggle="instr-text">Show all</button></div></details>
       </section>
-      <section class="section-block" id="skills">
+      <section class="section-block tile reveal c-teal h1" id="skills">
         <div class="header-row"><h2 class="neon-header cyan">Skills · 5</h2><div><button class="copy-btn" type="button" data-copy="skills-all">Copy</button></div></div>
         <div class="skill-full">
           <div class="skill-head"><div><span class="skill-name">setup-coach-getting-started</span><div class="skill-desc">Use as the first conversation with a new owner of the Grok Bot Setup Coach template: a one-sitting setup covering the bot email, the bot&#x27;s name, the main job, connectors, a first skill, a first routine, a backup, an avatar and a share card.</div></div><button class="copy-btn" type="button" data-copy="skill-1">Copy</button></div>
@@ -429,9 +440,9 @@ Output: a short report with OK items, items to fix (and how), and one idea. Read
 Writing: short sentences, one idea each. No fluff, filler or hype words. Calm and factual.
 </textarea>
       </section>
-      <section class="section-block" id="routines">
+      <section class="section-block tile reveal c-mag h1" id="routines">
         <div class="header-row"><h2 class="neon-header pink">Routines</h2><div><button class="copy-btn" type="button" data-copy="routines-text">Copy</button></div></div>
-<div class="table-wrap"><table><thead><tr><th>Name</th><th>Cron</th><th>Timing</th><th>Prompt</th><th>Output</th></tr></thead><tbody><tr><td>Weekly backup</td><td>0 20 * * 0</td><td>Sunday 20:00, flexible ±15 min</td><td>&quot;Make a weekly backup of this bot&#x27;s setup: its memory summary, skill list, routine list and connector list. Save it to the connected drive the owner chose during setup; if they didn&#x27;t choose one, save it as a dated file on the bot&#x27;s computer. Only add new copies; never delete or overwrite older backups. Report to the owner in this chat only if the backup fails; if it succeeds, send nothing.&quot;</td><td>Silent, or a failure alert</td></tr><tr><td>Monthly setup checkup (health/check routine)</td><td>0 9 1 * *</td><td>1st of the month 09:00, flexible ±15 min</td><td>&quot;Run the setup-coach-checkup skill on this bot&#x27;s setup (read-only review of connectors, skills, routines, backup and avatar). Change nothing. Send the owner in this chat one short report with what&#x27;s healthy and any suggested fixes, each needing their yes before applying.&quot;</td><td>One short report</td></tr><tr><td>Day-2 follow-up (one-off, created only after the owner&#x27;s yes)</td><td>the day after setup at 09:00 (Africa/Johannesburg), exact</td><td>once</td><td>&quot;Ask how the first routine went, then offer to adjust it or add the next skill.&quot;</td><td>One message</td></tr></tbody></table></div><div class="paused-note">Routines use your timezone (default Africa/Johannesburg) and ship paused until you say yes.</div><textarea class="hidden" id="routines-text" aria-hidden="true" tabindex="-1"># Routines (timezone: Africa/Johannesburg)
+<div class="table-wrap"><table><thead><tr><th>Name</th><th>Cron</th><th>Timing</th><th>Prompt</th><th>Output</th></tr></thead><tbody><tr><td data-label="Name">Weekly backup</td><td data-label="Cron">0 20 * * 0</td><td data-label="Timing">Sunday 20:00, flexible ±15 min</td><td data-label="Prompt">&quot;Make a weekly backup of this bot&#x27;s setup: its memory summary, skill list, routine list and connector list. Save it to the connected drive the owner chose during setup; if they didn&#x27;t choose one, save it as a dated file on the bot&#x27;s computer. Only add new copies; never delete or overwrite older backups. Report to the owner in this chat only if the backup fails; if it succeeds, send nothing.&quot;</td><td data-label="Output">Silent, or a failure alert</td></tr><tr><td data-label="Name">Monthly setup checkup (health/check routine)</td><td data-label="Cron">0 9 1 * *</td><td data-label="Timing">1st of the month 09:00, flexible ±15 min</td><td data-label="Prompt">&quot;Run the setup-coach-checkup skill on this bot&#x27;s setup (read-only review of connectors, skills, routines, backup and avatar). Change nothing. Send the owner in this chat one short report with what&#x27;s healthy and any suggested fixes, each needing their yes before applying.&quot;</td><td data-label="Output">One short report</td></tr><tr><td data-label="Name">Day-2 follow-up (one-off, created only after the owner&#x27;s yes)</td><td data-label="Cron">the day after setup at 09:00 (Africa/Johannesburg), exact</td><td data-label="Timing">once</td><td data-label="Prompt">&quot;Ask how the first routine went, then offer to adjust it or add the next skill.&quot;</td><td data-label="Output">One message</td></tr></tbody></table></div><div class="paused-note">Routines use your timezone (default Africa/Johannesburg) and ship paused until you say yes.</div><textarea class="hidden" id="routines-text" aria-hidden="true" tabindex="-1"># Routines (timezone: Africa/Johannesburg)
 All routines ship paused. The owner switches them on during setup (step 7) or later.
 
 | Name | Cron | Timing | Prompt | Output |
@@ -441,9 +452,9 @@ All routines ship paused. The owner switches them on during setup (step 7) or la
 | Day-2 follow-up (one-off, created only after the owner&#x27;s yes) | the day after setup at 09:00 (Africa/Johannesburg), exact | once | &quot;Ask how the first routine went, then offer to adjust it or add the next skill.&quot; | One message |
 </textarea>
       </section>
-      <section class="section-block" id="avatar">
+      <section class="section-block tile reveal c-lime h1" id="avatar">
         <div class="header-row"><h2 class="neon-header lime">Avatar</h2><div><button class="copy-btn" type="button" data-copy="avatar-prompt">Copy prompt</button></div></div>
-<p style="font-size:0.85rem; color:var(--secondary); margin-bottom:0.5rem;">The approved avatar. Installed bots download it from https://bots.socialbrand.africa/bots/grok-bot-setup-coach/avatar.png.</p><div class="avatar-options"><figure class="avatar-opt"><img src="/assets/img/bots/grok-bot-setup-coach/A.jpg" alt="Grok Bot Setup Coach avatar option Spanner in a speech bubble (approved 24-10-2026)" width="140" height="140" loading="lazy"><figcaption class="avatar-label">Spanner in a speech bubble (approved 24-10-2026)</figcaption></figure></div><pre class="block-text truncated" id="avatar-prompt"># Avatar prompt (category style guide)
+<p class="avatar-note">The approved avatar. Installed bots download it from https://bots.socialbrand.africa/bots/grok-bot-setup-coach/avatar.png.</p><div class="avatar-options"><figure class="avatar-opt"><img src="/assets/img/bots/grok-bot-setup-coach/A.jpg" alt="Grok Bot Setup Coach avatar · Spanner in a speech bubble (approved 24-10-2026)" width="140" height="140" loading="lazy"><figcaption class="avatar-label">Spanner in a speech bubble (approved 24-10-2026)</figcaption></figure></div><pre class="block-text truncated" id="avatar-prompt"># Avatar prompt (category style guide)
 - Category: PA-DESK (Desk and setup). The category sets the symbol family and colours. See the avatar style guide.
 - Approved avatar: avatars/approved.png (Spanner in a speech bubble).
 - Prompt used:
@@ -455,7 +466,7 @@ Flat vector app icon, square, full-bleed solid deep navy background (#0B1F3F). O
 - Status: style-guide avatar approved by SocialBrand on 24-10-2026. It replaces the older option A.
 </pre><button class="show-all" type="button" data-toggle="avatar-prompt">Show all</button>
       </section>
-      <section class="section-block" id="selling">
+      <section class="section-block tile reveal c-teal h1" id="selling">
         <div class="header-row"><h2 class="neon-header cyan">Selling points</h2><div><button class="copy-btn" type="button" data-copy="selling-text">Copy</button></div></div>
 <pre class="block-text" id="selling-text">By SocialBrand · socialbrand.africa.
 - **Name:** Grok Bot Setup Coach
@@ -479,11 +490,11 @@ Flat vector app icon, square, full-bleed solid deep navy background (#0B1F3F). O
 - **Companion:** Token Cop (https://bots.socialbrand.africa/bots/token-cop): tracks your Grok usage so limits don&#x27;t catch you by surprise. Setup Coach gets the bot working; Token Cop keeps the usage sustainable. Gatekeeper (https://bots.socialbrand.africa/bots/gatekeeper) remains useful once you run several bots and need to govern which bot may use which logged-in site.
 - **Install:** Add to Grok Bot: https://x.ai/bot/duonwBK5SXXQTAy6NNg2r (v1.0)</pre>
       </section>
-      <section class="section-block" id="docs">
+      <section class="section-block tile reveal c-mag h1" id="docs">
         <div class="header-row"><h2 class="neon-header pink">Docs</h2></div>
         <ul><li><a href="https://github.com/SocialBrandAfrica/socialbrand-bots/blob/main/packages/grok-bot-setup-coach/docs/README.md" target="_blank" rel="noopener" style="color:var(--cyan);">README.md</a> · What it does, routines, skills, hard rules</li><li><a href="https://github.com/SocialBrandAfrica/socialbrand-bots/blob/main/packages/grok-bot-setup-coach/docs/SETUP.md" target="_blank" rel="noopener" style="color:var(--cyan);">SETUP.md</a> · Step-by-step first run and a short test</li><li><a href="https://github.com/SocialBrandAfrica/socialbrand-bots/blob/main/packages/grok-bot-setup-coach/docs/FAQ.md" target="_blank" rel="noopener" style="color:var(--cyan);">FAQ.md</a> · Common questions, limits and costs</li><li><a href="https://github.com/SocialBrandAfrica/socialbrand-bots/blob/main/packages/grok-bot-setup-coach/docs/TROUBLESHOOTING.md" target="_blank" rel="noopener" style="color:var(--cyan);">TROUBLESHOOTING.md</a> · The most likely failures and the fix for each</li></ul>
       </section>
-      <section class="companion-promo coral" id="companion">
+      <section class="companion-promo reveal coral" id="companion">
         <div class="avatar-lg"><img src="/assets/img/bots/token-cop/A.jpg" alt="Token Cop avatar" width="140" height="140" loading="lazy"></div>
         <div>
           <div class="eyebrow">Companion bot · Token Cop</div>
@@ -496,7 +507,7 @@ Flat vector app icon, square, full-bleed solid deep navy background (#0B1F3F). O
         </div>
       </section>
     </div>
-    <aside class="side-panel">
+    <aside class="side-panel tile reveal c-teal h1">
       <h4>Can access</h4><ul><li>The bot&#x27;s own email inbox</li><li>The connector catalogue (you sign in on the provider&#x27;s own screen)</li><li>Skills and routines on your own bot</li><li>Image generation for the avatar</li><li>Template export and a cloud drive for backup</li></ul>
       <h4>Cannot access</h4><ul><li>Customer contact: never messages, emails or posts for you</li><li>Payments, banking, brokers, medical, legal</li><li>Passwords, tokens, card or ID numbers in chat</li><li>Your existing skills, routines or memory (adds, never removes)</li></ul>
       <h4>Hard rules</h4><ul><li>Shows every change and waits for your yes.</li><li>Adds, never removes.</li><li>First routines stay light (max 2 a day).</li><li>Launch posts are drafts; you post them.</li><li>The share card never carries private data.</li></ul>
@@ -514,7 +525,7 @@ Flat vector app icon, square, full-bleed solid deep navy background (#0B1F3F). O
       <strong id="share-title">Share</strong>
       <button class="close-x" type="button" data-close-share aria-label="Close">×</button>
     </div>
-    <p style="font-size:0.85rem; color:var(--secondary); margin:0.75rem 0;">Make your own version. It looks exactly like ours but carries your name and handle, so the find is yours. The SocialBrand line and site link stay. No points, no leaderboard.</p>
+    <p class="modal-note">Make your own version. It looks exactly like ours but carries your name and handle, so the find is yours. The SocialBrand line and site link stay. No points, no leaderboard.</p>
     <label for="share-name">Your name (optional)</label>
     <input id="share-name" type="text" maxlength="40" placeholder="Your name" autocomplete="name">
     <label for="share-handle">Your handle</label>
@@ -525,7 +536,7 @@ Flat vector app icon, square, full-bleed solid deep navy background (#0B1F3F). O
         <img id="share-avatar" class="avatar-img" src="/apple-touch-icon.png" alt="">
         <div><strong id="share-bot-name"></strong><div class="meta" id="share-bot-meta"></div></div>
       </div>
-      <p style="font-size:0.85rem; color:var(--secondary);" id="share-bot-pitch"></p>
+      <p class="modal-note" id="share-bot-pitch"></p>
       <div class="meta" style="margin-top:0.5rem;" id="share-url">bots.socialbrand.africa</div>
     </div>
     <div class="row">
