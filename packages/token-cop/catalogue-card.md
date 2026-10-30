@@ -10,7 +10,7 @@ By SocialBrand · socialbrand.africa.
   - Daily forecast from the first stocktake
   - Capacity-first ("use it or lose it") before cheapest model
   - Morning Prompt Pack you copy; bot never sends
-  - New in v0.7: cheap gate, so routines only wake the model when something changed
+  - New in v0.7: cheap gate. Token Cop proposes a gate so routines stop waking the model for nothing
   - New in v0.7: cut relays, so bots brief once and report back once
   - Nothing changes without your yes; routines ship paused
   - Screenshot+OCR works without admin keys

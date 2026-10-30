@@ -4,6 +4,10 @@
 - Rule 8, cut relays: brief once, report back once, no relay loops, no fleet polls unless the owner asks. Owner A–E card.
 - Rules 7 and 8 added to instructions, economy text and the governance skill (new step 11).
 - Catalogue card and docs README: one line per new rule. Version markers 0.7.
+- Hard rules split into three parts (1/3, 2/3, 3/3), each under 450 characters, most critical first. Wording unchanged. Same split in the economy text.
+- Role and Governance rulebook split into parts under 450 characters. Wording unchanged.
+- New skill token-cop-hard-rules restates all 12 hard rules word for word.
+- Wording fix: Token Cop proposes a cheap gate; routines are not gated unless the owner picks it.
 
 ## 0.6 — 24-10-2026
 - Lead message: transparency, governance and control. The owner sees every token consumer and sets their own rules. Token Cop makes sure they stick.
