@@ -4,15 +4,23 @@ import html, json, re, shutil, os
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
-ROOT = Path('/workspace/bot-foundry')
-PK = ROOT / 'packages'
-OUT = Path(os.environ.get('SITE_OUT', str(ROOT / 'site/live')))
+def need_env(name, what):
+    v = os.environ.get(name)
+    if not v or not Path(v).is_dir():
+        sys.exit(f'build.py: set {name} to {what} (got: {v or "unset"})')
+    return Path(v)
+import sys
+OUT = need_env('SITE_OUT', 'the site repo checkout (output, and the source of packages/)')
+PK = need_env('FOUNDRY_PACKAGES', 'the folder with the bot packages not yet in the site repo')
 TCP = OUT / 'packages/token-cop'  # Token Cop source of truth: the package in the site repo
 SITE = 'https://bots.socialbrand.africa'
 import sys; sys.path.insert(0, str(Path(__file__).resolve().parent)); from howto import flow_home, flow_compact
-GK_SKILLS = Path('/home/box/sand-data/workflows')
+GK_SKILLS = need_env('GK_SKILLS_DIR', 'the folder with the Gatekeeper skill folders')
 TC_PAGE = SITE + '/bots/token-cop'
 E = lambda s: html.escape(s, quote=True)
+RAW_QUOTE_PAGES = {'token-cop'}  # pages whose text blocks keep quotes as typed (matches the live pages)
+CUR = {'slug': None}
+EP = lambda s: html.escape(s, quote=CUR['slug'] not in RAW_QUOTE_PAGES)
 
 def rd(p): return Path(p).read_text(encoding='utf-8').replace('TOKEN_COP_LINK', TC_PAGE).strip() + '\n'
 
@@ -48,7 +56,7 @@ def selling_from_card(p):
 
 BOTS = []
 BOTS.append(dict(
-    slug='token-cop', name='Token Cop', version='v0.7', updated='30-10-2026', tag='DEV-AGENTS', status='live',
+    slug='token-cop', name='Token Cop', version='v0.7', updated='30-10-2026', tag='DEV-BUILDERS', status='live',
     color='#0D9488', headline=('TOKEN COP', 'AI USAGE GOVERNANCE'), neon='cyan',
     pitch='See every place your AI usage goes. Set your own rules. Token Cop checks them.',
     hello='New and free: a template that runs on your existing plan.',
@@ -127,7 +135,7 @@ GK_ROUTINES_OLD = """# Routines (ship paused; turned on only after the owner say
 | Weekly agent-risk watch | Weekly, time chosen at setup | Reviews agent and access risks across the fleet | Short report to the owner |
 """
 BOTS.append(dict(
-    slug='gatekeeper', name='Gatekeeper', version='v1.6', updated='24-10-2026', docs='gatekeeper', tag='DEV-AGENTS', status='live',
+    slug='gatekeeper', name='Gatekeeper', version='v1.6', updated='24-10-2026', docs='gatekeeper', tag='DEV-BUILDERS', status='live',
     color='#1B2A4E', headline=('GATEKEEPER', 'WHO GETS IN'), neon='pink',
     pitch='Browser-access governance for your bot fleet: which bot may use which signed-in service, logins kept alive, and a weekday-morning check that the rules hold.',
     profile="Gatekeeper by SocialBrand: browser-access governance for your bot fleet\n" + json.loads(rd((GKP if GK_FULL else PK/'gatekeeper')/'profile.json'))['description'] + "\nCategory: DEV-AGENTS · Bots and automation\nVersion: 1.6 · Risk: Low\nPlatform: Grok Bot\nPublisher: SocialBrand (socialbrand.africa)\nWritten by SocialBrand (socialbrand.africa)\nCompanion: Grok Bot Setup Coach (" + SITE + "/bots/grok-bot-setup-coach); also Token Cop (" + TC_PAGE + ")",
@@ -158,7 +166,7 @@ BOTS.append(dict(
     instructions=rd(PK/'supplier-order-checker/instructions.md'),
     skills=[skill(PK/f'supplier-order-checker/skills/{s}/SKILL.md') for s in ['getting-started','invoice-check','claim-draft','supplier-scorecard']],
     routines=rd(PK/'supplier-order-checker/routines.md'), routines_note='All routines ship paused. Timezone: Africa/Johannesburg.',
-    avatars=[('supplier-order-checker/avatars/approved.png','Shipping box with an orange label (approved 24-10-2026)')], avatar_more=False, avatar_prompt=re.sub(r'\bPG\b', 'SocialBrand', rd(PK/'supplier-order-checker/avatar-prompt.md')),
+    avatars=[('supplier-order-checker/avatars/approved.png','Shipping box with an orange label (approved 24-10-2026)')], avatar_more=False, avatar_prompt=rd(PK/'supplier-order-checker/avatar-prompt.md'),
     selling=selling_from_card(PK/'supplier-order-checker/catalogue-card.md').replace('(x.ai link added after export)', '(link comes with the first release)'),
     economy=None,
     note='Coming soon. This bot is still in build and testing. The text below is the working draft, shared openly.',
@@ -176,15 +184,16 @@ def setup_assets():
         d = img/'bots'/b['slug']; d.mkdir(parents=True, exist_ok=True)
         new = []
         for i, (src, label) in enumerate(b['avatars']):
-            sp = PK/src if (PK/src).exists() else Path('/workspace')/src
+            sp = next((p for p in (OUT/'packages'/src, PK/src) if p.exists()), None)
+            if sp is None: sys.exit(f'build.py: avatar not found: {src}')
             letter = 'ABC'[i]
             dst = d/f'{letter}.jpg'
-            Image.open(sp).convert('RGB').resize((512, 512), Image.LANCZOS).save(dst, quality=88, optimize=True)
+            if IMAGES: Image.open(sp).convert('RGB').resize((512, 512), Image.LANCZOS).save(dst, quality=88, optimize=True)
             new.append((f'/assets/img/bots/{b["slug"]}/{letter}.jpg', label))
-            if i == 0:  # stable public path for the approved avatar; installed bots download it
+            if IMAGES and i == 0:  # stable public path for the approved avatar; installed bots download it
                 (OUT/'bots'/b['slug']).mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(sp, OUT/'bots'/b['slug']/'avatar.png')
-        if not new:  # placeholder tile, clearly not an avatar
+        if not new and IMAGES:  # placeholder tile, clearly not an avatar
             ph = Image.new('RGB', (512, 512), '#262626'); dr = ImageDraw.Draw(ph)
             f = ImageFont.truetype(FONT_BLACK, 220); t = b['name'][0]
             w = dr.textlength(t, font=f); dr.text(((512-w)/2, 120), t, font=f, fill='#A3A3A3')
@@ -195,9 +204,15 @@ def setup_assets():
         make_og(b, d/'og.png')
         b['og'] = f'{SITE}/assets/img/bots/{b["slug"]}/og.png'
 
-FONT_BLACK = '/usr/share/fonts/truetype/sand-box/google/Archivo Black/ArchivoBlack-Regular.ttf'
-FONT_REG = '/usr/share/fonts/truetype/sand-box/google/Archivo/Archivo-VariableFont_wdth,wght.ttf'
-FONT_MONO = next(Path('/usr/share/fonts/truetype/sand-box/google/JetBrains Mono').glob('JetBrainsMono-VariableFont*.ttf'), None) or '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf'
+# Fonts: set SITE_FONT_DIR to a folder holding ArchivoBlack-Regular.ttf, Archivo-VariableFont_wdth,wght.ttf
+# and JetBrainsMono-VariableFont_wght.ttf. If unset, image generation is skipped and the images in the repo are kept.
+_FD = os.environ.get('SITE_FONT_DIR')
+def _font(pat):
+    return next(iter(sorted(Path(_FD).rglob(pat))), None) if _FD else None
+FONT_BLACK, FONT_REG, FONT_MONO = _font('ArchivoBlack-Regular.ttf'), _font('Archivo-VariableFont*.ttf'), _font('JetBrainsMono-VariableFont*.ttf')
+IMAGES = all((FONT_BLACK, FONT_REG, FONT_MONO))
+if not IMAGES: print('build.py: SITE_FONT_DIR unset or fonts missing; skipping image generation (repo images kept)')
+FONT_BLACK, FONT_REG = str(FONT_BLACK), str(FONT_REG)
 NEON = {'pink': '#FF2E9A', 'lime': '#B6FF00', 'cyan': '#00E5FF'}
 
 def wraptext(dr, text, font, maxw):
@@ -210,6 +225,7 @@ def wraptext(dr, text, font, maxw):
     return lines
 
 def make_og(b, path, avatar_path=None):
+    if not IMAGES: return
     W, H = 1200, 630
     im = Image.new('RGB', (W, H), '#0A0A0A'); dr = ImageDraw.Draw(im)
     dr.rectangle([24, 24, W-25, H-25], outline='#262626', width=2)
@@ -239,6 +255,7 @@ def make_og(b, path, avatar_path=None):
     im.save(path, optimize=True)
 
 def site_assets():
+    if not IMAGES: return
     img = OUT/'assets/img'
     # favicon
     svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#0A0A0A"/><rect x="6" y="14" width="52" height="36" fill="#FF2E9A"/><text x="34" y="44" font-family="Arial Black,Archivo,sans-serif" font-weight="900" font-size="28" text-anchor="middle" fill="#000">SB</text><text x="32" y="42" font-family="Arial Black,Archivo,sans-serif" font-weight="900" font-size="28" text-anchor="middle" fill="#fff">SB</text></svg>'
@@ -380,7 +397,7 @@ def share_attrs(b):
 PAL = ['mag', 'red', 'amb', 'lime', 'teal', 'blue', 'vio']  # brand clock palette (brand-bible/clocks/flat-v1/palette.json)
 def pal(i): return PAL[i % len(PAL)]
 
-TAG_CLS = {'DEV-AGENTS': 'cat-dev', 'PA-DESK': 'cat-pa', 'OWN-OPS': 'cat-own'}
+TAG_CLS = {'DEV-BUILDERS': 'cat-dev', 'PA-DESK': 'cat-pa', 'OWN-OPS': 'cat-own'}
 
 def card(b, i=0):
     soon = b['status'] == 'coming-soon'
@@ -514,11 +531,12 @@ def section(id_, title, color, body, copy_id=None, extra_btn=''):
 
 def pre(id_, text, trunc=False):
     t = ' truncated' if trunc else ''
-    s = f'<pre class="block-text{t}" id="{id_}">{E(text)}</pre>'
+    s = f'<pre class="block-text{t}" id="{id_}">{EP(text)}</pre>'
     if trunc: s += f'<button class="show-all" type="button" data-toggle="{id_}">Show all</button>'
     return s
 
 def bot_page(b):
+    CUR['slug'] = b['slug']
     c = BY[b['companion']]
     slug = b['slug']
     h = head(f'{b["name"]} {b["version"]} · SocialBrand Bots', f'{b["pitch"]}{(" " + b["meta_extra"]) if b.get("meta_extra") else ""} Free, full open text. A Grok Bot plan is required to run it. By SocialBrand.', f'/bots/{slug}', b['og'], 'article')
@@ -684,7 +702,7 @@ def about_page():
 
 def main():
     # clean generated content but keep assets css/js
-    for p in ['bots', 'assets/img']:
+    for p in (['bots', 'assets/img'] if IMAGES else []):
         shutil.rmtree(OUT/p, ignore_errors=True)
     (OUT/'assets/img').mkdir(parents=True, exist_ok=True)
     setup_assets(); site_assets()
