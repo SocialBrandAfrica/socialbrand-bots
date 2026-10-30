@@ -99,7 +99,7 @@ BOTS.append(dict(
     rules=['Shows every change and waits for your yes.','Adds, never removes.','First routines stay light (max 2 a day).','Launch posts are drafts; you post them.','The share card never carries private data.'],
     companion='token-cop', promo=('KEEP YOUR USAGE', 'UNDER CONTROL', "Token Cop tracks your Grok usage so limits don't catch you by surprise. Setup Coach got your bot working; Token Cop keeps the usage sustainable.", 'coral'),
 ))
-gk_skills = [dict(x, text=x['text'].replace('/workspace/gatekeeper/access-table.md', 'access-table.md on your shared computer')) for x in [skill(GK_SKILLS/f'{s}/SKILL.md') for s in ['gatekeeper-getting-started-2','gatekeeper-access-table','gatekeeper-health-check','gatekeeper-offboarding-drill']]]
+gk_skills = [dict(x, text=re.sub(r'/[\w-]+/gatekeeper/access-table\.md', 'access-table.md on your shared computer', x['text'])) for x in [skill(GK_SKILLS/f'{s}/SKILL.md') for s in ['gatekeeper-getting-started-2','gatekeeper-access-table','gatekeeper-health-check','gatekeeper-offboarding-drill']]]
 GK_RULES = """# Gatekeeper: rules (v1.6)
 Gatekeeper's full instruction text isn't published on this page yet. These are the rules its published skills carry, word for word where possible.
 
