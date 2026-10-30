@@ -1,6 +1,6 @@
 # Token Cop setup
 
-Version 0.6. Setup takes about 15 minutes, plus one-time sign-ins to your usage pages.
+Version 0.7. Setup takes about 15 minutes, plus one-time sign-ins to your usage pages.
 
 ## What you need
 - **No connectors.** Token Cop needs none to install.

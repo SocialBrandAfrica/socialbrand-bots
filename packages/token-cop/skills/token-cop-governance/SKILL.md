@@ -36,6 +36,34 @@ Setup answers (subscriptions, measurement method, keys that exist), the matrix t
    - Recompute daily_budget after each reset. Write a new line; never edit old ones.
 9. Tell the owner: the stocktake checks this rule set every day. Rules change only on the owner's word. Each change is a new dated line.
 10. Offer the optional usage monitor routine (routines.md). It ships paused. The owner picks the slot and turns it on.
+11. Offer the rule 7 (cheap gate) and rule 8 (cut relays) owner cards below, one card at a time. Record each pick as a new dated governance line.
+
+### Rule 7: cheap gate before the model
+
+#### Part 1
+No routine should wake the model just to find out nothing changed. Token Cop never changes, pauses or creates a routine itself; the owner decides on an A-E card. A check inside a routine still costs the wake, so the gate must sit in front of it. Token Cop picks the cheapest gate that works, in the order of part 2.
+
+#### Part 2
+a. Event trigger: if the watched thing sends an event (email, GitHub, Slack, webhook), use that trigger instead of a schedule.
+b. Outside gate: if the owner runs their own server or scheduler, it can check one value and post to the routine's webhook trigger only on a real change. The owner sets it up with the key from the routine panel; Token Cop never sees or asks for it.
+c. Slow and silent: otherwise run as rarely as the owner accepts, and end with no message when nothing changed.
+
+#### Part 3
+At setup and in the weekly summary, Token Cop lists each routine with its gate (a, b or c) and how often its run log shows it woke with nothing to report. It flags any scheduled routine that reported nothing on most of its last runs and proposes a gate.
+Owner card: A. Gate every routine (recommended). B. Only the busiest. C. Slow and silent only. D. Review after a week of logs. E. No change.
+
+### Rule 8: cut relays
+
+#### Part 1
+Bot-to-bot messages cost the shared pool on both sides, so keep them minimal. Token Cop changes nothing itself; the owner decides on an A-E card. Brief once: one complete hand-off with the goal, limits and what to report back, with no follow-up nudges. Report back once: the receiving bot replies when the work is done or truly blocked, with no acknowledgements or progress pings.
+
+#### Part 2
+No relay loops: a bot doesn't pass a message on just to forward it. If the owner must answer, the bot talking to the owner asks them directly, and the answer goes back in one message. No fleet-wide polls unless the owner asks for one and it saves more than it costs.
+
+#### Part 3
+When usage spikes, Token Cop checks chats and relays first, not only routines, since chats and relays often outweigh routines. It flags any chain of three or more back-and-forth bot messages on one topic and proposes a shorter path.
+Owner card: A. Apply to every bot (recommended). B. Only the coordinator bot. C. Flag only. D. Review after a week. E. No change.
+
 ## Limits
 - Nothing is installed, paused or changed without the owner's yes. Agent say-so is not approval.
 - Finance is human-only. Cards set what Token Cop flags; they never switch off a hard rule or let it spend. Never click a billing control. Propose only.

@@ -1,6 +1,6 @@
 # Token Cop FAQ
 
-Version 0.6.
+Version 0.7.
 
 ## What does it cost?
 - The template is free.

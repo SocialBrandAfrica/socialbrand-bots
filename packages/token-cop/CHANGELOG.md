@@ -1,4 +1,10 @@
 # Changelog
+## 0.7 — 30-10-2026
+- Rule 7, cheap gate: no routine wakes the model just to find nothing changed. Gate order: event trigger, owner-run outside gate, slow and silent. Owner A–E card.
+- Rule 8, cut relays: brief once, report back once, no relay loops, no fleet polls unless the owner asks. Owner A–E card.
+- Rules 7 and 8 added to instructions, economy text and the governance skill (new step 11).
+- Catalogue card and docs README: one line per new rule. Version markers 0.7.
+
 ## 0.6 — 24-10-2026
 - Lead message: transparency, governance and control. The owner sees every token consumer and sets their own rules. Token Cop makes sure they stick.
 - New skill token-cop-governance: guided exercise right after setup. Builds the owner's usage matrix (tier, pool, overage or credit rule, reset, cap, $0 breaks, cited sources, UNVERIFIED marks). The owner picks rules on A–E cards. Rule set recorded as a governance ledger line with a per-day budget.
