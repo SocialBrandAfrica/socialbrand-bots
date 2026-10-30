@@ -1,6 +1,6 @@
 # Token Cop
 
-Version 0.6 · Category DEV-AGENTS · Risk level: Low
+Version 0.7 · Category DEV-AGENTS · Risk level: Low
 
 ## What it does
 You see every token consumer. You set your own rules. Token Cop makes sure they stick.
@@ -8,6 +8,8 @@ You see every token consumer. You set your own rules. Token Cop makes sure they 
 - Right after setup, it maps every place your AI usage goes with you: plan, pool, overage, reset, cap and what stops at $0. Each rule cites an official page. Anything unconfirmed is marked unverified.
 - You pick your rules on lettered cards: a daily cap, no extra spend, approvals for costly models or media, cadence limits.
 - Every stocktake checks those rules and flags any breach.
+- New in v0.7, cheap gate: Token Cop proposes a cheap gate so routines stop waking the model for nothing. You pick it on an A–E card.
+- New in v0.7, cut relays: bots brief once and report back once, with no relay loops.
 
 It also helps you avoid hitting your AI usage limits too early.
 
@@ -92,7 +94,7 @@ To pause or resume one, ask Token Cop in chat. For example:
 Token Cop confirms which routine and time before it changes anything.
 
 ## Skills
-Seven skills. Each name starts with `token-cop-`.
+Eight skills. Each name starts with `token-cop-`.
 
 | Skill | What it does |
 |---|---|
@@ -103,6 +105,7 @@ Seven skills. Each name starts with `token-cop-`.
 | token-cop-prompt-pack | Writes one ready-to-paste briefing per AI tool you use. |
 | token-cop-ledger | Writes readings to the local ledger, works out burn rates and builds reports. |
 | token-cop-delegation | Suggests handing work down to cheaper options or up to a stronger model or to you. Proposes only. |
+| token-cop-hard-rules | Restates the 12 hard rules word for word. Checked before any action, proposal or hand-off. |
 
 ## How work is classified
 Each piece of open work gets one label and a one-line reason:
