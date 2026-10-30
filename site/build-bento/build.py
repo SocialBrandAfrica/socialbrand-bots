@@ -56,7 +56,7 @@ def selling_from_card(p):
 
 BOTS = []
 BOTS.append(dict(
-    slug='token-cop', name='Token Cop', version='v0.7', updated='30-10-2026', tag='DEV-BUILDERS', status='live',
+    slug='token-cop', name='Token Cop', version='v0.7', updated='30-10-2026', tag='DEV-AGENTS', status='live',
     color='#0D9488', headline=('TOKEN COP', 'AI USAGE GOVERNANCE'), neon='cyan',
     pitch='See every place your AI usage goes. Set your own rules. Token Cop checks them.',
     hello='New and free: a template that runs on your existing plan.',
@@ -135,7 +135,7 @@ GK_ROUTINES_OLD = """# Routines (ship paused; turned on only after the owner say
 | Weekly agent-risk watch | Weekly, time chosen at setup | Reviews agent and access risks across the fleet | Short report to the owner |
 """
 BOTS.append(dict(
-    slug='gatekeeper', name='Gatekeeper', version='v1.6', updated='24-10-2026', docs='gatekeeper', tag='DEV-BUILDERS', status='live',
+    slug='gatekeeper', name='Gatekeeper', version='v1.6', updated='24-10-2026', docs='gatekeeper', tag='DEV-AGENTS', status='live',
     color='#1B2A4E', headline=('GATEKEEPER', 'WHO GETS IN'), neon='pink',
     pitch='Browser-access governance for your bot fleet: which bot may use which signed-in service, logins kept alive, and a weekday-morning check that the rules hold.',
     profile="Gatekeeper by SocialBrand: browser-access governance for your bot fleet\n" + json.loads(rd((GKP if GK_FULL else PK/'gatekeeper')/'profile.json'))['description'] + "\nCategory: DEV-AGENTS · Bots and automation\nVersion: 1.6 · Risk: Low\nPlatform: Grok Bot\nPublisher: SocialBrand (socialbrand.africa)\nWritten by SocialBrand (socialbrand.africa)\nCompanion: Grok Bot Setup Coach (" + SITE + "/bots/grok-bot-setup-coach); also Token Cop (" + TC_PAGE + ")",
@@ -397,7 +397,7 @@ def share_attrs(b):
 PAL = ['mag', 'red', 'amb', 'lime', 'teal', 'blue', 'vio']  # brand clock palette (brand-bible/clocks/flat-v1/palette.json)
 def pal(i): return PAL[i % len(PAL)]
 
-TAG_CLS = {'DEV-BUILDERS': 'cat-dev', 'PA-DESK': 'cat-pa', 'OWN-OPS': 'cat-own'}
+TAG_CLS = {'DEV-AGENTS': 'cat-dev', 'PA-DESK': 'cat-pa', 'OWN-OPS': 'cat-own'}
 
 def card(b, i=0):
     soon = b['status'] == 'coming-soon'
@@ -531,7 +531,7 @@ def section(id_, title, color, body, copy_id=None, extra_btn=''):
 
 def pre(id_, text, trunc=False):
     t = ' truncated' if trunc else ''
-    s = f'<pre class="block-text{t}" id="{id_}">{EP(text)}</pre>'
+    s = f'<pre class="block-text{t}" id="{id_}">{(E if id_ == 'selling-text' else EP)(text)}</pre>'
     if trunc: s += f'<button class="show-all" type="button" data-toggle="{id_}">Show all</button>'
     return s
 
