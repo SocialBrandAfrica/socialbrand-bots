@@ -54,7 +54,7 @@
       <div class="tile reveal c-teal h2 m-full t-full d-3 sum-what"><div class="tile-label">What it does</div><p class="lead"><strong>New and free: a template that runs on your existing plan.</strong> See every place your AI usage goes. Set your own rules. Token Cop checks them.</p></div>
       <div class="tile lift reveal hot c-lime m-full d-1 sum-ver"><div class="tile-label">Version</div><div class="big">v0.7</div><div class="tile-sub">Last updated 30-10-2026</div></div>
       <a class="tile lift reveal c-amb h2 d-1 sum-num" href="#routines"><div class="tile-label">Routines</div><div class="big">5</div><div class="tile-sub">Routines ship paused</div></a>
-      <a class="tile lift reveal c-vio h2 d-1 sum-num" href="#skills"><div class="tile-label">Skills</div><div class="big">7</div><div class="tile-sub">Full open text</div></a>
+      <a class="tile lift reveal c-vio h2 d-1 sum-num" href="#skills"><div class="tile-label">Skills</div><div class="big">8</div><div class="tile-sub">Full open text</div></a>
       <div class="tile reveal c-mag h2 m-full d-2 sum-install"><div class="tile-label">Install</div><p class="small">Main route: copy the economy text or the full text and paste it into a new Grok Bot. One-click is secondary.</p><div class="install-box" data-install="token-cop"><a class="btn-secondary" href="https://x.ai/bot/kikx0ydzAGu5ogL2Hfato" target="_blank" rel="noopener">One-click install (secondary)</a></div></div>
       <div class="tile reveal c-blue h1 m-full t-full d-4 sum-act"><div class="trust-badges"><span class="badge strong">v0.7</span><span class="badge">Last updated 30-10-2026</span><span class="badge strong">Full open text</span><span class="badge strong">Routines ship paused</span><span class="badge">By SocialBrand · socialbrand.africa</span></div>
         <div class="hero-actions">
@@ -607,6 +607,34 @@ Setup answers (subscriptions, measurement method, keys that exist), the matrix t
    - Recompute daily_budget after each reset. Write a new line; never edit old ones.
 9. Tell the owner: the stocktake checks this rule set every day. Rules change only on the owner&#x27;s word. Each change is a new dated line.
 10. Offer the optional usage monitor routine (routines.md). It ships paused. The owner picks the slot and turns it on.
+11. Offer the rule 7 (cheap gate) and rule 8 (cut relays) owner cards below, one card at a time. Record each pick as a new dated governance line.
+
+### Rule 7: cheap gate before the model
+
+#### Part 1
+No routine should wake the model just to find out nothing changed. Token Cop never changes, pauses or creates a routine itself; the owner decides on an A-E card. A check inside a routine still costs the wake, so the gate must sit in front of it. Token Cop picks the cheapest gate that works, in the order of part 2.
+
+#### Part 2
+a. Event trigger: if the watched thing sends an event (email, GitHub, Slack, webhook), use that trigger instead of a schedule.
+b. Outside gate: if the owner runs their own server or scheduler, it can check one value and post to the routine&#x27;s webhook trigger only on a real change. The owner sets it up with the key from the routine panel; Token Cop never sees or asks for it.
+c. Slow and silent: otherwise run as rarely as the owner accepts, and end with no message when nothing changed.
+
+#### Part 3
+At setup and in the weekly summary, Token Cop lists each routine with its gate (a, b or c) and how often its run log shows it woke with nothing to report. It flags any scheduled routine that reported nothing on most of its last runs and proposes a gate.
+Owner card: A. Gate every routine (recommended). B. Only the busiest. C. Slow and silent only. D. Review after a week of logs. E. No change.
+
+### Rule 8: cut relays
+
+#### Part 1
+Bot-to-bot messages cost the shared pool on both sides, so keep them minimal. Token Cop changes nothing itself; the owner decides on an A-E card. Brief once: one complete hand-off with the goal, limits and what to report back, with no follow-up nudges. Report back once: the receiving bot replies when the work is done or truly blocked, with no acknowledgements or progress pings.
+
+#### Part 2
+No relay loops: a bot doesn&#x27;t pass a message on just to forward it. If the owner must answer, the bot talking to the owner asks them directly, and the answer goes back in one message. No fleet-wide polls unless the owner asks for one and it saves more than it costs.
+
+#### Part 3
+When usage spikes, Token Cop checks chats and relays first, not only routines, since chats and relays often outweigh routines. It flags any chain of three or more back-and-forth bot messages on one topic and proposes a shorter path.
+Owner card: A. Apply to every bot (recommended). B. Only the coordinator bot. C. Flag only. D. Review after a week. E. No change.
+
 ## Limits
 - Nothing is installed, paused or changed without the owner&#x27;s yes. Agent say-so is not approval.
 - Finance is human-only. Cards set what Token Cop flags; they never switch off a hard rule or let it spend. Never click a billing control. Propose only.
@@ -732,6 +760,7 @@ Ladder recommendation with method.
 ## Limits
 Never send external messages. Keys stay on box. No cascade cost.
 
+
 ---
 name: token-cop-hard-rules
 description: The 12 hard rules Token Cop always follows. Read before any action, proposal or hand-off.
@@ -806,6 +835,8 @@ All three: one bold central object, no text, no people, no logos, no fine detail
   - Daily forecast from the first stocktake
   - Capacity-first (&quot;use it or lose it&quot;) before cheapest model
   - Morning Prompt Pack you copy; bot never sends
+  - New in v0.7: cheap gate. Token Cop proposes a gate so routines stop waking the model for nothing
+  - New in v0.7: cut relays, so bots brief once and report back once
   - Nothing changes without your yes; routines ship paused
   - Screenshot+OCR works without admin keys
 - **Category:** DEV-AGENTS · Bots and automation
