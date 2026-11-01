@@ -308,7 +308,7 @@ def head(title, desc, path, og, kind='website'):
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@Soc_Bran_Africa">
+<meta name="twitter:site" content="@SocialBrand_ZA">
 <meta name="twitter:title" content="{E(title)}">
 <meta name="twitter:description" content="{E(desc)}">
 <meta name="twitter:image" content="{og}">
@@ -337,7 +337,7 @@ def nav(active=''):
     <a href="/about#contribute">Contribute</a>
   </div>
   <button class="search-pill" type="button" onclick="var i=document.getElementById('hero-search'); if(i){{i.focus();}}else{{location.href='/#catalogue';}}">Search… <kbd>Ctrl K</kbd></button>
-  <a href="https://x.com/Soc_Bran_Africa" target="_blank" rel="noopener" class="x-link">X</a>
+  <a href="https://x.com/SocialBrand_ZA" target="_blank" rel="noopener" class="x-link">X</a>
   </div>
 </nav>
 '''
@@ -381,7 +381,7 @@ def footer():
   <div class="footer-cols">
     <div><h4>Bots</h4><ul>{bots}</ul></div>
     <div><h4>Site</h4><ul><li><a href="/">Home</a></li><li><a href="/#how">How Open-Text works</a></li><li><a href="/about">About</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul></div>
-    <div><h4>SocialBrand</h4><ul><li>Contact: <a href="https://socialbrand.africa" target="_blank" rel="noopener">socialbrand.africa</a></li><li>On X: <a href="https://x.com/Soc_Bran_Africa" target="_blank" rel="noopener">@Soc_Bran_Africa</a></li></ul></div>
+    <div><h4>SocialBrand</h4><ul><li>Contact: <a href="https://socialbrand.africa" target="_blank" rel="noopener">socialbrand.africa</a></li><li>On X: <a href="https://x.com/SocialBrand_ZA" target="_blank" rel="noopener">@SocialBrand_ZA</a></li></ul></div>
   </div>
   <p style="margin-top:1.25rem;">SocialBrand Bots · bots.socialbrand.africa · By SocialBrand · socialbrand.africa · Open-Text Publishing. Bots run on Grok Bot (<a href="https://x.ai/bot" target="_blank" rel="noopener">x.ai/bot</a>); SocialBrand is independent and not affiliated with, sponsored or endorsed by xAI.</p>
 </footer>
@@ -648,7 +648,7 @@ def bot_page(b):
       <p class="small">Main route: copy the economy text or the full text and paste it into a new Grok Bot. One-click is secondary.</p>
       <div class="install-box" data-install="{slug}">{'<span class="install-soon">Install link coming soon</span>' if b['status'] != 'live' else f'<a class="btn-secondary" href="https://x.ai/bot/" target="_blank" rel="noopener">One-click install (secondary)</a>'}</div>
       <h4 style="margin-top:1.5rem;">More</h4>
-      <p class="small"><a href="/about#contribute" style="color:var(--cyan);">Contribute</a> · <a href="https://x.com/Soc_Bran_Africa" target="_blank" rel="noopener" style="color:var(--cyan);">Follow on X</a></p>
+      <p class="small"><a href="/about#contribute" style="color:var(--cyan);">Contribute</a> · <a href="https://x.com/SocialBrand_ZA" target="_blank" rel="noopener" style="color:var(--cyan);">Follow on X</a></p>
     </aside>
   </div>
 </main>
@@ -694,7 +694,7 @@ def about_page():
   <section class="section" id="contribute">
     <div class="eyebrow lime">Contribute</div>
     <h2 class="section-title">Contribute a bot</h2>
-    <div class="prose"><p>Got a niche job your bot does well? Tell us on X at <a href="https://x.com/Soc_Bran_Africa" target="_blank" rel="noopener" style="color:var(--cyan)">@Soc_Bran_Africa</a>. Contributions follow the same Foundry standard: full open text, three avatar options, routines paused. A contribute form comes later.</p>
+    <div class="prose"><p>Got a niche job your bot does well? Tell us on X at <a href="https://x.com/SocialBrand_ZA" target="_blank" rel="noopener" style="color:var(--cyan)">@SocialBrand_ZA</a>. Contributions follow the same Foundry standard: full open text, three avatar options, routines paused. A contribute form comes later.</p>
     <p>Contact: <a href="https://socialbrand.africa" target="_blank" rel="noopener" style="color:var(--cyan)">socialbrand.africa</a></p></div>
   </section>
 </main>

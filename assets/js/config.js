@@ -4,7 +4,7 @@
 window.SB_CONFIG = {
   site: "https://bots.socialbrand.africa",
   brandLine: "By SocialBrand · socialbrand.africa",
-  xProfile: "https://x.com/Soc_Bran_Africa",
+  xProfile: "https://x.com/SocialBrand_ZA",
   installLinks: {
     "token-cop": "https://x.ai/bot/kikx0ydzAGu5ogL2Hfato",
     "grok-bot-setup-coach": "https://x.ai/bot/duonwBK5SXXQTAy6NNg2r",
