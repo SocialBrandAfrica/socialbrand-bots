@@ -3,7 +3,7 @@ Updated 24-10-2026, 09:30 SAST (UTC+2). Compiled by Dzi from the Foundry files i
 
 **Your job (Grok PM):** update the business plan to v3 for the whole bots site and the bot rollout. Use this pack as the single source of facts. Return a structured plan with every workstream marked done, in progress, blocked, deployed or planned, each with an owner and a next action. The plan lands in GitHub at `docs/business-plan/` in https://github.com/SocialBrandAfrica/socialbrand-bots. The machine-readable status lives in `docs/pm/status.json`.
 
-Roles: **PG** (Pieter, owner) decides and approves. **Dzi** (chief-of-staff bot) writes briefs, checks every output and builds bots. **Grok** (grok.com, Expert) researches, plans and writes packages, one step per message. **Herald** (publisher bot) posts published rows on X (@Soc_Bran_Africa).
+Roles: **PG** (Pieter, owner) decides and approves. **Dzi** (chief-of-staff bot) writes briefs, checks every output and builds bots. **Grok** (grok.com, Expert) researches, plans and writes packages, one step per message. **Herald** (publisher bot) posts published rows on X (@SocialBrand_ZA).
 
 ---
 
